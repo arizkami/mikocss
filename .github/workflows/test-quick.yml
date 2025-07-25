@@ -1,0 +1,41 @@
+name: Quick Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quick-test:
+    name: Quick Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+    
+    - name: Quick module tests
+      run: |
+        python -c "from colors.base import base_colors; print(f'Colors: {len(base_colors)}')"
+        python -c "from typography.base import text_sizes; print(f'Text sizes: {len(text_sizes)}')"
+        python -c "from core.processor import ColorProcessor; print('Core processor OK')"
+    
+    - name: CLI help test
+      run: python main.py --help
+    
+    - name: Quick generation test
+      run: |
+        mkdir test_out
+        python main.py init -p gtk --output test_out
+        ls -la test_out/
