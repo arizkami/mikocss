@@ -28,7 +28,6 @@ jobs:
       - name: Install Python deps
         run: |
           pip install -U pip pytest black flake8 isort
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Test CLI
         run: |
