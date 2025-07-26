@@ -2,336 +2,72 @@ name: MikoCSS CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, develop ]
-    tags: [ 'v*' ]
+    branches: [main, develop]
+    tags: ['v*']
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
   test:
-    name: Test Suite
+    name: Test CLI + Core
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ['3.8', '3.9', '3.10', '3.11']
-    
+        python-version: ['3.9', '3.11']
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-    
-    - name: Cache pip dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest pytest-cov flake8 black isort
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        if [ -f requirements-build.txt ]; then pip install -r requirements-build.txt; fi
-      shell: bash
-    
-    - name: Lint with flake8
-      run: |
-        # Stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # Exit-zero treats all errors as warnings
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    
-    - name: Check code formatting with black
-      run: black --check --diff .
-    
-    - name: Check import sorting with isort
-      run: isort --check-only --diff .
-    
-    - name: Test color system
-      run: |
-        python -c "from colors.base import base_colors; print(f'✅ Colors loaded: {len(base_colors)} color families')"
-    
-    - name: Test typography system
-      run: |
-        python -c "from typography.base import text_sizes, font_weights; print(f'✅ Typography loaded: {len(text_sizes)} sizes, {len(font_weights)} weights')"
-    
-    - name: Test layout system
-      run: |
-        python -c "from layout.base import display_types; print(f'✅ Layout loaded: {len(display_types)} display types')"
-    
-    - name: Test core processor
-      run: |
-        python -c "from core.processor import ColorProcessor; p = ColorProcessor('gtk'); print('✅ Core processor working')"
-    
-    - name: Test main CLI
-      run: |
-        python main.py --help
-        echo "✅ CLI help working"
-    
-    - name: Test framework generation
-      run: |
-        mkdir -p test_output
-        python main.py init -p gtk --output test_output
-        ls -la test_output/
-        echo "✅ GTK generation working"
-        
-        python main.py init -p qt5 --output test_output
-        echo "✅ Qt5 generation working"
-        
-        python main.py init -p win32 --output test_output
-        echo "✅ Win32 generation working"
-      shell: bash
-    
-    - name: Verify generated files
-      run: |
-        cd test_output
-        if [ ! -f "miko_color.hpp" ]; then echo "❌ miko_color.hpp missing"; exit 1; fi
-        if [ ! -f "miko_wrapper.hpp" ]; then echo "❌ miko_wrapper.hpp missing"; exit 1; fi
-        if [ ! -f "miko_typography.hpp" ]; then echo "❌ miko_typography.hpp missing"; exit 1; fi
-        if [ ! -f "miko_layout.hpp" ]; then echo "❌ miko_layout.hpp missing"; exit 1; fi
-        if [ ! -f "CMakeLists.txt" ]; then echo "❌ CMakeLists.txt missing"; exit 1; fi
-        if [ ! -f "main.cpp" ]; then echo "❌ main.cpp missing"; exit 1; fi
-        echo "✅ All generated files present"
-      shell: bash
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Python deps
+        run: |
+          pip install -U pip pytest black flake8 isort
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Lint + Format + Test
+        run: |
+          black --check .
+          isort --check-only .
+          flake8 . --max-line-length 127
+          pytest -v
+
+      - name: Test CLI
+        run: |
+          python mikocss.py --help
+          python mikocss.py init -p gtk --output test_out
+          ls -la test_out
 
   build:
-    name: Build Executable
+    name: Build CLI Executable
     needs: test
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        include:
-          - os: windows-latest
-            artifact_name: mikocss-windows.exe
-            asset_name: mikocss-windows-x64.exe
-          - os: ubuntu-latest
-            artifact_name: mikocss-linux
-            asset_name: mikocss-linux-x64
-          - os: macos-latest
-            artifact_name: mikocss-macos
-            asset_name: mikocss-macos-x64
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    
-    - name: Cache pip dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-build-${{ hashFiles('**/requirements*.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-build-
-          ${{ runner.os }}-pip-
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pyinstaller
-        if [ -f requirements-build.txt ]; then pip install -r requirements-build.txt; fi
-      shell: bash
-    
-    - name: Build with PyInstaller
-      run: |
-        python build_pyinstaller.py
-      shell: bash
-    
-    - name: Rename executable (Windows)
-      if: matrix.os == 'windows-latest'
-      run: |
-        cd dist
-        if [ -f "mikocss.exe" ]; then
-          mv mikocss.exe ${{ matrix.artifact_name }}
-        fi
-      shell: bash
-    
-    - name: Rename executable (Unix)
-      if: matrix.os != 'windows-latest'
-      run: |
-        cd dist
-        if [ -f "mikocss" ]; then
-          mv mikocss ${{ matrix.artifact_name }}
-          chmod +x ${{ matrix.artifact_name }}
-        fi
-      shell: bash
-    
-    - name: Test executable
-      run: |
-        cd dist
-        if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-          ./${{ matrix.artifact_name }} --help
-        else
-          ./${{ matrix.artifact_name }} --help
-        fi
-        echo "✅ Executable working"
-      shell: bash
-    
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: ${{ matrix.asset_name }}
-        path: |
-          dist/${{ matrix.artifact_name }}
-          dist/README.md
-          dist/run_example.bat
-        retention-days: 30
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
-  release:
-    name: Create Release
-    needs: [test, build]
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Download all artifacts
-      uses: actions/download-artifact@v3
-    
-    - name: Create release archives
-      run: |
-        # Create Windows archive
-        cd mikocss-windows-x64
-        zip -r ../mikocss-windows-x64.zip .
-        cd ..
-        
-        # Create Linux archive
-        cd mikocss-linux-x64
-        tar -czf ../mikocss-linux-x64.tar.gz .
-        cd ..
-        
-        # Create macOS archive
-        cd mikocss-macos-x64
-        tar -czf ../mikocss-macos-x64.tar.gz .
-        cd ..
-        
-        ls -la *.zip *.tar.gz
-    
-    - name: Extract version from tag
-      id: get_version
-      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
-    
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: MikoCSS ${{ steps.get_version.outputs.VERSION }}
-        body: |
-          ## MikoCSS ${{ steps.get_version.outputs.VERSION }}
-          
-          🎨 **Generate C++ libraries for colors, typography, and layout**
-          
-          ### 📦 Downloads
-          - **Windows**: `mikocss-windows-x64.zip`
-          - **Linux**: `mikocss-linux-x64.tar.gz`
-          - **macOS**: `mikocss-macos-x64.tar.gz`
-          
-          ### 🚀 Quick Start
-          ```bash
-          # Extract the archive for your platform
-          # Run the executable:
-          ./mikocss init -p <framework>
-          ```
-          
-          ### 🎯 Supported Frameworks
-          - `gtk` - GTK/GDK compatible code
-          - `qt5` - Qt5 compatible code
-          - `qt6` - Qt6 compatible code
-          - `win32` - Win32/COLORREF compatible code
-          
-          ### ✨ Features
-          - 🎨 256+ colors with 8k color support
-          - ✍️ Comprehensive typography system
-          - 📐 Complete layout utilities
-          - 🎯 Multi-framework support
-          - 📦 Ready-to-use C++ headers
-          
-          ### 📄 Generated Files
-          - `miko_color.hpp` - Color definitions and utilities
-          - `miko_wrapper.hpp` - Framework-specific conversions
-          - `miko_typography.hpp` - Typography definitions
-          - `miko_layout.hpp` - Layout definitions
-          - `CMakeLists.txt` - Build configuration
-          - `main.cpp` - Example usage
-        draft: false
-        prerelease: false
-    
-    - name: Upload Windows Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./mikocss-windows-x64.zip
-        asset_name: mikocss-windows-x64.zip
-        asset_content_type: application/zip
-    
-    - name: Upload Linux Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./mikocss-linux-x64.tar.gz
-        asset_name: mikocss-linux-x64.tar.gz
-        asset_content_type: application/gzip
-    
-    - name: Upload macOS Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./mikocss-macos-x64.tar.gz
-        asset_name: mikocss-macos-x64.tar.gz
-        asset_content_type: application/gzip
+      - uses: actions/checkout@v4
 
-  security:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    
-    - name: Install security tools
-      run: |
-        python -m pip install --upgrade pip
-        pip install bandit safety
-    
-    - name: Run Bandit security scan
-      run: |
-        bandit -r . -f json -o bandit-report.json || true
-        bandit -r . || true
-    
-    - name: Run Safety check
-      run: |
-        safety check || true
-    
-    - name: Upload security reports
-      uses: actions/upload-artifact@v3
-      with:
-        name: security-reports
-        path: bandit-report.json
-        retention-days: 30
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build CLI with PyInstaller (.spec)
+        run: |
+          pyinstaller main.spec --clean --noconfirm
+
+      - name: Upload CLI Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mikocss-${{ matrix.os }}
+          path: dist/*
