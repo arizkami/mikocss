@@ -7,7 +7,7 @@ box_shadow = {
     "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
     "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
     "inner": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
-    "none": "0 0 #0000"
+    "none": "0 0 #0000",
 }
 
 # Text shadow utilities
@@ -18,7 +18,7 @@ text_shadow = {
     "lg": "0 15px 30px rgb(0 0 0 / 0.5), 0 5px 15px rgb(0 0 0 / 0.4)",
     "xl": "0 20px 40px rgb(0 0 0 / 0.5)",
     "2xl": "0 25px 50px rgb(0 0 0 / 0.5)",
-    "none": "0 0 #0000"
+    "none": "0 0 #0000",
 }
 
 # Opacity utilities
@@ -43,7 +43,7 @@ opacity = {
     "85": "0.85",
     "90": "0.9",
     "95": "0.95",
-    "100": "1"
+    "100": "1",
 }
 
 # Mix blend mode utilities
@@ -65,7 +65,7 @@ mix_blend_mode = {
     "color": "color",
     "luminosity": "luminosity",
     "plus_darker": "plus-darker",
-    "plus_lighter": "plus-lighter"
+    "plus_lighter": "plus-lighter",
 }
 
 # Background blend mode utilities
@@ -85,7 +85,7 @@ background_blend_mode = {
     "hue": "hue",
     "saturation": "saturation",
     "color": "color",
-    "luminosity": "luminosity"
+    "luminosity": "luminosity",
 }
 
 # Mask clip utilities
@@ -93,7 +93,7 @@ mask_clip = {
     "border": "border-box",
     "padding": "padding-box",
     "content": "content-box",
-    "text": "text"
+    "text": "text",
 }
 
 # Mask composite utilities
@@ -101,26 +101,20 @@ mask_composite = {
     "add": "add",
     "subtract": "subtract",
     "intersect": "intersect",
-    "exclude": "exclude"
+    "exclude": "exclude",
 }
 
 # Mask image utilities
-mask_image = {
-    "none": "none"
-}
+mask_image = {"none": "none"}
 
 # Mask mode utilities
-mask_mode = {
-    "alpha": "alpha",
-    "luminance": "luminance",
-    "match_source": "match-source"
-}
+mask_mode = {"alpha": "alpha", "luminance": "luminance", "match_source": "match-source"}
 
 # Mask origin utilities
 mask_origin = {
     "border": "border-box",
     "padding": "padding-box",
-    "content": "content-box"
+    "content": "content-box",
 }
 
 # Mask position utilities
@@ -133,7 +127,7 @@ mask_position = {
     "right": "right",
     "right_bottom": "right bottom",
     "right_top": "right top",
-    "top": "top"
+    "top": "top",
 }
 
 # Mask repeat utilities
@@ -143,18 +137,11 @@ mask_repeat = {
     "repeat_x": "repeat-x",
     "repeat_y": "repeat-y",
     "round": "round",
-    "space": "space"
+    "space": "space",
 }
 
 # Mask size utilities
-mask_size = {
-    "auto": "auto",
-    "cover": "cover",
-    "contain": "contain"
-}
+mask_size = {"auto": "auto", "cover": "cover", "contain": "contain"}
 
 # Mask type utilities
-mask_type = {
-    "luminance": "luminance",
-    "alpha": "alpha"
-}
+mask_type = {"luminance": "luminance", "alpha": "alpha"}

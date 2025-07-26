@@ -69,7 +69,7 @@ width = {
     "dvw": "100dvw",
     "min": "min-content",
     "max": "max-content",
-    "fit": "fit-content"
+    "fit": "fit-content",
 }
 
 # Min width utilities
@@ -78,7 +78,7 @@ min_width = {
     "full": "100%",
     "min": "min-content",
     "max": "max-content",
-    "fit": "fit-content"
+    "fit": "fit-content",
 }
 
 # Max width utilities
@@ -105,7 +105,7 @@ max_width = {
     "screen_md": "768px",
     "screen_lg": "1024px",
     "screen_xl": "1280px",
-    "screen_2xl": "1536px"
+    "screen_2xl": "1536px",
 }
 
 # Height utilities
@@ -168,7 +168,7 @@ height = {
     "dvh": "100dvh",
     "min": "min-content",
     "max": "max-content",
-    "fit": "fit-content"
+    "fit": "fit-content",
 }
 
 # Min height utilities
@@ -181,7 +181,7 @@ min_height = {
     "dvh": "100dvh",
     "min": "min-content",
     "max": "max-content",
-    "fit": "fit-content"
+    "fit": "fit-content",
 }
 
 # Max height utilities
@@ -229,5 +229,5 @@ max_height = {
     "dvh": "100dvh",
     "min": "min-content",
     "max": "max-content",
-    "fit": "fit-content"
+    "fit": "fit-content",
 }

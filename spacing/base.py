@@ -35,7 +35,7 @@ spacing_scale = {
     "72": "18rem",
     "80": "20rem",
     "96": "24rem",
-    "auto": "auto"
+    "auto": "auto",
 }
 
 # Padding utilities

@@ -12,7 +12,7 @@ text_sizes = {
     "6xl": {"font_size": "3.75rem", "line_height": "1"},
     "7xl": {"font_size": "4.5rem", "line_height": "1"},
     "8xl": {"font_size": "6rem", "line_height": "1"},
-    "9xl": {"font_size": "8rem", "line_height": "1"}
+    "9xl": {"font_size": "8rem", "line_height": "1"},
 }
 
 # Font weight definitions
@@ -27,7 +27,7 @@ font_weights = {
     "bold": 700,
     "extrabold": 800,
     "black": 900,
-    "blackrr": 950  # Extra black variant
+    "blackrr": 950,  # Extra black variant
 }
 
 # Additional typography utilities
@@ -37,7 +37,7 @@ font_families = {
     "serif": ["ui-serif", "Georgia", "serif"],
     "mono": ["ui-monospace", "SFMono-Regular", "monospace"],
     "display": ["ui-serif", "Georgia", "serif"],
-    "body": ["ui-sans-serif", "system-ui", "sans-serif"]
+    "body": ["ui-sans-serif", "system-ui", "sans-serif"],
 }
 
 # Font size utilities (expanded with pixel values)
@@ -54,20 +54,17 @@ font_sizes = {
     "6xl": {"font_size": "3.75rem", "font_size_px": 60, "line_height": "1"},
     "7xl": {"font_size": "4.5rem", "font_size_px": 72, "line_height": "1"},
     "8xl": {"font_size": "6rem", "font_size_px": 96, "line_height": "1"},
-    "9xl": {"font_size": "8rem", "font_size_px": 128, "line_height": "1"}
+    "9xl": {"font_size": "8rem", "font_size_px": 128, "line_height": "1"},
 }
 
 # Font smoothing utilities
 font_smoothing = {
     "antialiased": "-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale",
-    "subpixel_antialiased": "-webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto"
+    "subpixel_antialiased": "-webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto",
 }
 
 # Font style utilities
-font_style = {
-    "italic": "italic",
-    "not_italic": "normal"
-}
+font_style = {"italic": "italic", "not_italic": "normal"}
 
 # Font stretch utilities
 font_stretch = {
@@ -79,7 +76,7 @@ font_stretch = {
     "semi_expanded": "semi-expanded",
     "expanded": "expanded",
     "extra_expanded": "extra-expanded",
-    "ultra_expanded": "ultra-expanded"
+    "ultra_expanded": "ultra-expanded",
 }
 
 # Font variant numeric utilities
@@ -92,7 +89,7 @@ font_variant_numeric = {
     "proportional_nums": "proportional-nums",
     "tabular_nums": "tabular-nums",
     "diagonal_fractions": "diagonal-fractions",
-    "stacked_fractions": "stacked-fractions"
+    "stacked_fractions": "stacked-fractions",
 }
 
 # Line clamp utilities
@@ -103,19 +100,14 @@ line_clamp = {
     "4": "4",
     "5": "5",
     "6": "6",
-    "none": "none"
+    "none": "none",
 }
 
 # List style image utilities
-list_style_image = {
-    "none": "none"
-}
+list_style_image = {"none": "none"}
 
 # List style position utilities
-list_style_position = {
-    "inside": "inside",
-    "outside": "outside"
-}
+list_style_position = {"inside": "inside", "outside": "outside"}
 
 # List style type utilities
 list_style_type = {
@@ -127,7 +119,7 @@ list_style_type = {
     "upper_roman": "upper-roman",
     "lower_roman": "lower-roman",
     "upper_alpha": "upper-alpha",
-    "lower_alpha": "lower-alpha"
+    "lower_alpha": "lower-alpha",
 }
 
 # Text align utilities
@@ -137,7 +129,7 @@ text_align = {
     "right": "right",
     "justify": "justify",
     "start": "start",
-    "end": "end"
+    "end": "end",
 }
 
 # Text color utilities (references to color system)
@@ -145,7 +137,7 @@ text_colors = {
     # This will reference the main color system
     "inherit": "inherit",
     "current": "currentColor",
-    "transparent": "transparent"
+    "transparent": "transparent",
 }
 
 # Text decoration line utilities
@@ -153,14 +145,14 @@ text_decoration_line = {
     "underline": "underline",
     "overline": "overline",
     "line_through": "line-through",
-    "no_underline": "none"
+    "no_underline": "none",
 }
 
 # Text decoration color utilities
 text_decoration_color = {
     "inherit": "inherit",
     "current": "currentColor",
-    "transparent": "transparent"
+    "transparent": "transparent",
 }
 
 # Text decoration style utilities
@@ -169,7 +161,7 @@ text_decoration_style = {
     "double": "double",
     "dotted": "dotted",
     "dashed": "dashed",
-    "wavy": "wavy"
+    "wavy": "wavy",
 }
 
 # Text decoration thickness utilities
@@ -180,7 +172,7 @@ text_decoration_thickness = {
     "1": "1px",
     "2": "2px",
     "4": "4px",
-    "8": "8px"
+    "8": "8px",
 }
 
 # Text underline offset utilities
@@ -190,7 +182,7 @@ text_underline_offset = {
     "1": "1px",
     "2": "2px",
     "4": "4px",
-    "8": "8px"
+    "8": "8px",
 }
 
 # Text transform utilities
@@ -198,14 +190,14 @@ text_transform = {
     "uppercase": "uppercase",
     "lowercase": "lowercase",
     "capitalize": "capitalize",
-    "normal_case": "none"
+    "normal_case": "none",
 }
 
 # Text overflow utilities
 text_overflow = {
     "truncate": "ellipsis",
     "text_ellipsis": "ellipsis",
-    "text_clip": "clip"
+    "text_clip": "clip",
 }
 
 # Text wrap utilities
@@ -213,7 +205,7 @@ text_wrap = {
     "wrap": "wrap",
     "nowrap": "nowrap",
     "balance": "balance",
-    "pretty": "pretty"
+    "pretty": "pretty",
 }
 
 # Text indent utilities
@@ -252,7 +244,7 @@ text_indent = {
     "64": "16rem",
     "72": "18rem",
     "80": "20rem",
-    "96": "24rem"
+    "96": "24rem",
 }
 
 # Vertical align utilities
@@ -264,7 +256,7 @@ vertical_align = {
     "text_top": "text-top",
     "text_bottom": "text-bottom",
     "sub": "sub",
-    "super": "super"
+    "super": "super",
 }
 
 # White space utilities
@@ -274,7 +266,7 @@ white_space = {
     "pre": "pre",
     "pre_line": "pre-line",
     "pre_wrap": "pre-wrap",
-    "break_spaces": "break-spaces"
+    "break_spaces": "break-spaces",
 }
 
 # Word break utilities
@@ -282,28 +274,17 @@ word_break = {
     "normal": "normal",
     "words": "break-word",
     "all": "break-all",
-    "keep": "keep-all"
+    "keep": "keep-all",
 }
 
 # Overflow wrap utilities
-overflow_wrap = {
-    "normal": "normal",
-    "words": "break-word",
-    "anywhere": "anywhere"
-}
+overflow_wrap = {"normal": "normal", "words": "break-word", "anywhere": "anywhere"}
 
 # Hyphens utilities
-hyphens = {
-    "none": "none",
-    "manual": "manual",
-    "auto": "auto"
-}
+hyphens = {"none": "none", "manual": "manual", "auto": "auto"}
 
 # Content utilities
-content = {
-    "none": "none",
-    "empty": "\"\""
-}
+content = {"none": "none", "empty": '""'}
 
 # Letter spacing utilities
 letter_spacing = {
@@ -312,7 +293,7 @@ letter_spacing = {
     "normal": "0em",
     "wide": "0.025em",
     "wider": "0.05em",
-    "widest": "0.1em"
+    "widest": "0.1em",
 }
 
 # Line height utilities
@@ -330,5 +311,5 @@ line_heights = {
     "snug": "1.375",
     "normal": "1.5",
     "relaxed": "1.625",
-    "loose": "2"
+    "loose": "2",
 }

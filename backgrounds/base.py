@@ -1,23 +1,19 @@
 # Background attachment utilities
-background_attachment = {
-    "fixed": "fixed",
-    "local": "local",
-    "scroll": "scroll"
-}
+background_attachment = {"fixed": "fixed", "local": "local", "scroll": "scroll"}
 
 # Background clip utilities
 background_clip = {
     "border": "border-box",
     "padding": "padding-box",
     "content": "content-box",
-    "text": "text"
+    "text": "text",
 }
 
 # Background color utilities (references color system)
 background_color = {
     "inherit": "inherit",
     "current": "currentColor",
-    "transparent": "transparent"
+    "transparent": "transparent",
 }
 
 # Background image utilities
@@ -30,14 +26,14 @@ background_image = {
     "gradient_to_b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
     "gradient_to_bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
     "gradient_to_l": "linear-gradient(to left, var(--tw-gradient-stops))",
-    "gradient_to_tl": "linear-gradient(to top left, var(--tw-gradient-stops))"
+    "gradient_to_tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
 }
 
 # Background origin utilities
 background_origin = {
     "border": "border-box",
     "padding": "padding-box",
-    "content": "content-box"
+    "content": "content-box",
 }
 
 # Background position utilities
@@ -50,7 +46,7 @@ background_position = {
     "right": "right",
     "right_bottom": "right bottom",
     "right_top": "right top",
-    "top": "top"
+    "top": "top",
 }
 
 # Background repeat utilities
@@ -60,12 +56,8 @@ background_repeat = {
     "repeat_x": "repeat-x",
     "repeat_y": "repeat-y",
     "repeat_round": "round",
-    "repeat_space": "space"
+    "repeat_space": "space",
 }
 
 # Background size utilities
-background_size = {
-    "auto": "auto",
-    "cover": "cover",
-    "contain": "contain"
-}
+background_size = {"auto": "auto", "cover": "cover", "contain": "contain"}

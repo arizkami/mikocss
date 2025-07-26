@@ -7,7 +7,7 @@ aspect_ratios = {
     "portrait": "3 / 4",
     "wide": "21 / 9",
     "ultrawide": "32 / 9",
-    "golden": "1.618 / 1"
+    "golden": "1.618 / 1",
 }
 
 # Column utilities
@@ -37,7 +37,7 @@ columns = {
     "4xl": "56rem",
     "5xl": "64rem",
     "6xl": "72rem",
-    "7xl": "80rem"
+    "7xl": "80rem",
 }
 
 # Break utilities
@@ -50,20 +50,14 @@ break_values = {
     "left": "left",
     "right": "right",
     "column": "column",
-    "avoid_column": "avoid-column"
+    "avoid_column": "avoid-column",
 }
 
 # Box decoration break
-box_decoration_break = {
-    "clone": "clone",
-    "slice": "slice"
-}
+box_decoration_break = {"clone": "clone", "slice": "slice"}
 
 # Box sizing
-box_sizing = {
-    "border": "border-box",
-    "content": "content-box"
-}
+box_sizing = {"border": "border-box", "content": "content-box"}
 
 # Display utilities
 display = {
@@ -87,29 +81,17 @@ display = {
     "inline_grid": "inline-grid",
     "contents": "contents",
     "list_item": "list-item",
-    "hidden": "none"
+    "hidden": "none",
 }
 
 # Float utilities
-float_values = {
-    "right": "right",
-    "left": "left",
-    "none": "none"
-}
+float_values = {"right": "right", "left": "left", "none": "none"}
 
 # Clear utilities
-clear_values = {
-    "left": "left",
-    "right": "right",
-    "both": "both",
-    "none": "none"
-}
+clear_values = {"left": "left", "right": "right", "both": "both", "none": "none"}
 
 # Isolation utilities
-isolation = {
-    "isolate": "isolate",
-    "auto": "auto"
-}
+isolation = {"isolate": "isolate", "auto": "auto"}
 
 # Object fit utilities
 object_fit = {
@@ -117,7 +99,7 @@ object_fit = {
     "cover": "cover",
     "fill": "fill",
     "none": "none",
-    "scale_down": "scale-down"
+    "scale_down": "scale-down",
 }
 
 # Object position utilities
@@ -130,7 +112,7 @@ object_position = {
     "right": "right",
     "right_bottom": "right bottom",
     "right_top": "right top",
-    "top": "top"
+    "top": "top",
 }
 
 # Overflow utilities
@@ -139,15 +121,11 @@ overflow = {
     "hidden": "hidden",
     "clip": "clip",
     "visible": "visible",
-    "scroll": "scroll"
+    "scroll": "scroll",
 }
 
 # Overscroll behavior utilities
-overscroll_behavior = {
-    "auto": "auto",
-    "contain": "contain",
-    "none": "none"
-}
+overscroll_behavior = {"auto": "auto", "contain": "contain", "none": "none"}
 
 # Position utilities
 position = {
@@ -155,7 +133,7 @@ position = {
     "fixed": "fixed",
     "absolute": "absolute",
     "relative": "relative",
-    "sticky": "sticky"
+    "sticky": "sticky",
 }
 
 # Inset utilities (top, right, bottom, left)
@@ -202,15 +180,11 @@ inset_values = {
     "1_4": "25%",
     "2_4": "50%",
     "3_4": "75%",
-    "full": "100%"
+    "full": "100%",
 }
 
 # Visibility utilities
-visibility = {
-    "visible": "visible",
-    "invisible": "hidden",
-    "collapse": "collapse"
-}
+visibility = {"visible": "visible", "invisible": "hidden", "collapse": "collapse"}
 
 # Z-index utilities
 z_index = {
@@ -220,7 +194,7 @@ z_index = {
     "30": "30",
     "40": "40",
     "50": "50",
-    "auto": "auto"
+    "auto": "auto",
 }
 
 # Flexbox utilities
@@ -289,7 +263,7 @@ flex_basis = {
     "9_12": "75%",
     "10_12": "83.333333%",
     "11_12": "91.666667%",
-    "full": "100%"
+    "full": "100%",
 }
 
 # Flex direction utilities
@@ -297,35 +271,20 @@ flex_direction = {
     "row": "row",
     "row_reverse": "row-reverse",
     "col": "column",
-    "col_reverse": "column-reverse"
+    "col_reverse": "column-reverse",
 }
 
 # Flex wrap utilities
-flex_wrap = {
-    "wrap": "wrap",
-    "wrap_reverse": "wrap-reverse",
-    "nowrap": "nowrap"
-}
+flex_wrap = {"wrap": "wrap", "wrap_reverse": "wrap-reverse", "nowrap": "nowrap"}
 
 # Flex utilities (shorthand)
-flex = {
-    "1": "1 1 0%",
-    "auto": "1 1 auto",
-    "initial": "0 1 auto",
-    "none": "none"
-}
+flex = {"1": "1 1 0%", "auto": "1 1 auto", "initial": "0 1 auto", "none": "none"}
 
 # Flex grow utilities
-flex_grow = {
-    "0": "0",
-    "1": "1"
-}
+flex_grow = {"0": "0", "1": "1"}
 
 # Flex shrink utilities
-flex_shrink = {
-    "0": "0",
-    "1": "1"
-}
+flex_shrink = {"0": "0", "1": "1"}
 
 # Order utilities
 order = {
@@ -343,7 +302,7 @@ order = {
     "12": "12",
     "first": "-9999",
     "last": "9999",
-    "none": "0"
+    "none": "0",
 }
 
 # Grid utilities
@@ -363,7 +322,7 @@ grid_template_columns = {
     "11": "repeat(11, minmax(0, 1fr))",
     "12": "repeat(12, minmax(0, 1fr))",
     "none": "none",
-    "subgrid": "subgrid"
+    "subgrid": "subgrid",
 }
 
 # Grid column utilities
@@ -409,7 +368,7 @@ grid_column = {
     "end_11": "11",
     "end_12": "12",
     "end_13": "13",
-    "end_auto": "auto"
+    "end_auto": "auto",
 }
 
 # Grid template rows utilities
@@ -421,7 +380,7 @@ grid_template_rows = {
     "5": "repeat(5, minmax(0, 1fr))",
     "6": "repeat(6, minmax(0, 1fr))",
     "none": "none",
-    "subgrid": "subgrid"
+    "subgrid": "subgrid",
 }
 
 # Grid row utilities
@@ -449,7 +408,7 @@ grid_row = {
     "end_5": "5",
     "end_6": "6",
     "end_7": "7",
-    "end_auto": "auto"
+    "end_auto": "auto",
 }
 
 # Grid auto flow utilities
@@ -458,7 +417,7 @@ grid_auto_flow = {
     "col": "column",
     "dense": "dense",
     "row_dense": "row dense",
-    "col_dense": "column dense"
+    "col_dense": "column dense",
 }
 
 # Grid auto columns utilities
@@ -466,7 +425,7 @@ grid_auto_columns = {
     "auto": "auto",
     "min": "min-content",
     "max": "max-content",
-    "fr": "minmax(0, 1fr)"
+    "fr": "minmax(0, 1fr)",
 }
 
 # Grid auto rows utilities
@@ -474,7 +433,7 @@ grid_auto_rows = {
     "auto": "auto",
     "min": "min-content",
     "max": "max-content",
-    "fr": "minmax(0, 1fr)"
+    "fr": "minmax(0, 1fr)",
 }
 
 # Gap utilities
@@ -583,7 +542,7 @@ gap = {
     "y_80": "20rem",
     "96": "24rem",
     "x_96": "24rem",
-    "y_96": "24rem"
+    "y_96": "24rem",
 }
 
 # Justify content utilities
@@ -595,7 +554,7 @@ justify_content = {
     "between": "space-between",
     "around": "space-around",
     "evenly": "space-evenly",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Justify items utilities
@@ -603,7 +562,7 @@ justify_items = {
     "start": "start",
     "end": "end",
     "center": "center",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Justify self utilities
@@ -612,7 +571,7 @@ justify_self = {
     "start": "start",
     "end": "end",
     "center": "center",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Align content utilities
@@ -625,7 +584,7 @@ align_content = {
     "around": "space-around",
     "evenly": "space-evenly",
     "baseline": "baseline",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Align items utilities
@@ -634,7 +593,7 @@ align_items = {
     "end": "flex-end",
     "center": "center",
     "baseline": "baseline",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Align self utilities
@@ -644,7 +603,7 @@ align_self = {
     "end": "flex-end",
     "center": "center",
     "stretch": "stretch",
-    "baseline": "baseline"
+    "baseline": "baseline",
 }
 
 # Place content utilities
@@ -656,7 +615,7 @@ place_content = {
     "around": "space-around",
     "evenly": "space-evenly",
     "baseline": "baseline",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Place items utilities
@@ -665,7 +624,7 @@ place_items = {
     "end": "end",
     "center": "center",
     "baseline": "baseline",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
 
 # Place self utilities
@@ -674,5 +633,5 @@ place_self = {
     "start": "start",
     "end": "end",
     "center": "center",
-    "stretch": "stretch"
+    "stretch": "stretch",
 }
