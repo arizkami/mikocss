@@ -33,6 +33,7 @@ jobs:
         shell: bash
         env:
           PYTHONIOENCODING: utf-8
+          PYTHONUTF8: 1
         run: |
           python main.py --help
           python main.py init -p gtk --output test_out
@@ -61,11 +62,12 @@ jobs:
         shell: bash
         env:
           PYTHONIOENCODING: utf-8
+          PYTHONUTF8: 1
         run: |
           pyinstaller main.spec --clean --noconfirm
 
       - name: Upload CLI Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mikocss-${{ matrix.os }}
           path: dist/*
