@@ -1,0 +1,962 @@
+// Total colors available: 7296
+// Available colors by family:
+
+// ALICEBLUE FAMILY (38 colors):
+//   Standard: aliceBlue-50, aliceBlue-100, aliceBlue-200, aliceBlue-300, aliceBlue-400, aliceBlue-500, aliceBlue-600, aliceBlue-700, aliceBlue-800, aliceBlue-900
+//   Micro: aliceBlue-25, aliceBlue-75, aliceBlue-125, aliceBlue-175, aliceBlue-225, aliceBlue-275, aliceBlue-325, aliceBlue-375, aliceBlue-425, aliceBlue-475, aliceBlue-525, aliceBlue-575, aliceBlue-625, aliceBlue-675, aliceBlue-725, aliceBlue-775, aliceBlue-825, aliceBlue-875, aliceBlue-925, aliceBlue-975
+//   Variants: aliceBlue-cold, aliceBlue-cool, aliceBlue-hot, aliceBlue-intense, aliceBlue-muted, aliceBlue-soft, aliceBlue-vivid, aliceBlue-warm
+
+// ALUMINUM FAMILY (38 colors):
+//   Standard: aluminum-50, aluminum-100, aluminum-200, aluminum-300, aluminum-400, aluminum-500, aluminum-600, aluminum-700, aluminum-800, aluminum-900
+//   Micro: aluminum-25, aluminum-75, aluminum-125, aluminum-175, aluminum-225, aluminum-275, aluminum-325, aluminum-375, aluminum-425, aluminum-475, aluminum-525, aluminum-575, aluminum-625, aluminum-675, aluminum-725, aluminum-775, aluminum-825, aluminum-875, aluminum-925, aluminum-975
+//   Variants: aluminum-cold, aluminum-cool, aluminum-hot, aluminum-intense, aluminum-muted, aluminum-soft, aluminum-vivid, aluminum-warm
+
+// AMBER FAMILY (38 colors):
+//   Standard: amber-50, amber-100, amber-200, amber-300, amber-400, amber-500, amber-600, amber-700, amber-800, amber-900
+//   Micro: amber-25, amber-75, amber-125, amber-175, amber-225, amber-275, amber-325, amber-375, amber-425, amber-475, amber-525, amber-575, amber-625, amber-675, amber-725, amber-775, amber-825, amber-875, amber-925, amber-975
+//   Variants: amber-cold, amber-cool, amber-hot, amber-intense, amber-muted, amber-soft, amber-vivid, amber-warm
+
+// AMETHYST FAMILY (38 colors):
+//   Standard: amethyst-50, amethyst-100, amethyst-200, amethyst-300, amethyst-400, amethyst-500, amethyst-600, amethyst-700, amethyst-800, amethyst-900
+//   Micro: amethyst-25, amethyst-75, amethyst-125, amethyst-175, amethyst-225, amethyst-275, amethyst-325, amethyst-375, amethyst-425, amethyst-475, amethyst-525, amethyst-575, amethyst-625, amethyst-675, amethyst-725, amethyst-775, amethyst-825, amethyst-875, amethyst-925, amethyst-975
+//   Variants: amethyst-cold, amethyst-cool, amethyst-hot, amethyst-intense, amethyst-muted, amethyst-soft, amethyst-vivid, amethyst-warm
+
+// ANTIQUEWHITE FAMILY (38 colors):
+//   Standard: antiqueWhite-50, antiqueWhite-100, antiqueWhite-200, antiqueWhite-300, antiqueWhite-400, antiqueWhite-500, antiqueWhite-600, antiqueWhite-700, antiqueWhite-800, antiqueWhite-900
+//   Micro: antiqueWhite-25, antiqueWhite-75, antiqueWhite-125, antiqueWhite-175, antiqueWhite-225, antiqueWhite-275, antiqueWhite-325, antiqueWhite-375, antiqueWhite-425, antiqueWhite-475, antiqueWhite-525, antiqueWhite-575, antiqueWhite-625, antiqueWhite-675, antiqueWhite-725, antiqueWhite-775, antiqueWhite-825, antiqueWhite-875, antiqueWhite-925, antiqueWhite-975
+//   Variants: antiqueWhite-cold, antiqueWhite-cool, antiqueWhite-hot, antiqueWhite-intense, antiqueWhite-muted, antiqueWhite-soft, antiqueWhite-vivid, antiqueWhite-warm
+
+// AQUA FAMILY (38 colors):
+//   Standard: aqua-50, aqua-100, aqua-200, aqua-300, aqua-400, aqua-500, aqua-600, aqua-700, aqua-800, aqua-900
+//   Micro: aqua-25, aqua-75, aqua-125, aqua-175, aqua-225, aqua-275, aqua-325, aqua-375, aqua-425, aqua-475, aqua-525, aqua-575, aqua-625, aqua-675, aqua-725, aqua-775, aqua-825, aqua-875, aqua-925, aqua-975
+//   Variants: aqua-cold, aqua-cool, aqua-hot, aqua-intense, aqua-muted, aqua-soft, aqua-vivid, aqua-warm
+
+// AURORA FAMILY (38 colors):
+//   Standard: aurora-50, aurora-100, aurora-200, aurora-300, aurora-400, aurora-500, aurora-600, aurora-700, aurora-800, aurora-900
+//   Micro: aurora-25, aurora-75, aurora-125, aurora-175, aurora-225, aurora-275, aurora-325, aurora-375, aurora-425, aurora-475, aurora-525, aurora-575, aurora-625, aurora-675, aurora-725, aurora-775, aurora-825, aurora-875, aurora-925, aurora-975
+//   Variants: aurora-cold, aurora-cool, aurora-hot, aurora-intense, aurora-muted, aurora-soft, aurora-vivid, aurora-warm
+
+// AZURE FAMILY (38 colors):
+//   Standard: azure-50, azure-100, azure-200, azure-300, azure-400, azure-500, azure-600, azure-700, azure-800, azure-900
+//   Micro: azure-25, azure-75, azure-125, azure-175, azure-225, azure-275, azure-325, azure-375, azure-425, azure-475, azure-525, azure-575, azure-625, azure-675, azure-725, azure-775, azure-825, azure-875, azure-925, azure-975
+//   Variants: azure-cold, azure-cool, azure-hot, azure-intense, azure-muted, azure-soft, azure-vivid, azure-warm
+
+// BARK FAMILY (38 colors):
+//   Standard: bark-50, bark-100, bark-200, bark-300, bark-400, bark-500, bark-600, bark-700, bark-800, bark-900
+//   Micro: bark-25, bark-75, bark-125, bark-175, bark-225, bark-275, bark-325, bark-375, bark-425, bark-475, bark-525, bark-575, bark-625, bark-675, bark-725, bark-775, bark-825, bark-875, bark-925, bark-975
+//   Variants: bark-cold, bark-cool, bark-hot, bark-intense, bark-muted, bark-soft, bark-vivid, bark-warm
+
+// BEIGE FAMILY (38 colors):
+//   Standard: beige-50, beige-100, beige-200, beige-300, beige-400, beige-500, beige-600, beige-700, beige-800, beige-900
+//   Micro: beige-25, beige-75, beige-125, beige-175, beige-225, beige-275, beige-325, beige-375, beige-425, beige-475, beige-525, beige-575, beige-625, beige-675, beige-725, beige-775, beige-825, beige-875, beige-925, beige-975
+//   Variants: beige-cold, beige-cool, beige-hot, beige-intense, beige-muted, beige-soft, beige-vivid, beige-warm
+
+// BISQUE FAMILY (38 colors):
+//   Standard: bisque-50, bisque-100, bisque-200, bisque-300, bisque-400, bisque-500, bisque-600, bisque-700, bisque-800, bisque-900
+//   Micro: bisque-25, bisque-75, bisque-125, bisque-175, bisque-225, bisque-275, bisque-325, bisque-375, bisque-425, bisque-475, bisque-525, bisque-575, bisque-625, bisque-675, bisque-725, bisque-775, bisque-825, bisque-875, bisque-925, bisque-975
+//   Variants: bisque-cold, bisque-cool, bisque-hot, bisque-intense, bisque-muted, bisque-soft, bisque-vivid, bisque-warm
+
+// BLACK FAMILY (38 colors):
+//   Standard: black-50, black-100, black-200, black-300, black-400, black-500, black-600, black-700, black-800, black-900
+//   Micro: black-25, black-75, black-125, black-175, black-225, black-275, black-325, black-375, black-425, black-475, black-525, black-575, black-625, black-675, black-725, black-775, black-825, black-875, black-925, black-975
+//   Variants: black-cold, black-cool, black-hot, black-intense, black-muted, black-soft, black-vivid, black-warm
+
+// BLANCHEDALMOND FAMILY (38 colors):
+//   Standard: blanchedAlmond-50, blanchedAlmond-100, blanchedAlmond-200, blanchedAlmond-300, blanchedAlmond-400, blanchedAlmond-500, blanchedAlmond-600, blanchedAlmond-700, blanchedAlmond-800, blanchedAlmond-900
+//   Micro: blanchedAlmond-25, blanchedAlmond-75, blanchedAlmond-125, blanchedAlmond-175, blanchedAlmond-225, blanchedAlmond-275, blanchedAlmond-325, blanchedAlmond-375, blanchedAlmond-425, blanchedAlmond-475, blanchedAlmond-525, blanchedAlmond-575, blanchedAlmond-625, blanchedAlmond-675, blanchedAlmond-725, blanchedAlmond-775, blanchedAlmond-825, blanchedAlmond-875, blanchedAlmond-925, blanchedAlmond-975
+//   Variants: blanchedAlmond-cold, blanchedAlmond-cool, blanchedAlmond-hot, blanchedAlmond-intense, blanchedAlmond-muted, blanchedAlmond-soft, blanchedAlmond-vivid, blanchedAlmond-warm
+
+// BLUE FAMILY (38 colors):
+//   Standard: blue-50, blue-100, blue-200, blue-300, blue-400, blue-500, blue-600, blue-700, blue-800, blue-900
+//   Micro: blue-25, blue-75, blue-125, blue-175, blue-225, blue-275, blue-325, blue-375, blue-425, blue-475, blue-525, blue-575, blue-625, blue-675, blue-725, blue-775, blue-825, blue-875, blue-925, blue-975
+//   Variants: blue-cold, blue-cool, blue-hot, blue-intense, blue-muted, blue-soft, blue-vivid, blue-warm
+
+// BRASS FAMILY (38 colors):
+//   Standard: brass-50, brass-100, brass-200, brass-300, brass-400, brass-500, brass-600, brass-700, brass-800, brass-900
+//   Micro: brass-25, brass-75, brass-125, brass-175, brass-225, brass-275, brass-325, brass-375, brass-425, brass-475, brass-525, brass-575, brass-625, brass-675, brass-725, brass-775, brass-825, brass-875, brass-925, brass-975
+//   Variants: brass-cold, brass-cool, brass-hot, brass-intense, brass-muted, brass-soft, brass-vivid, brass-warm
+
+// BRICK FAMILY (38 colors):
+//   Standard: brick-50, brick-100, brick-200, brick-300, brick-400, brick-500, brick-600, brick-700, brick-800, brick-900
+//   Micro: brick-25, brick-75, brick-125, brick-175, brick-225, brick-275, brick-325, brick-375, brick-425, brick-475, brick-525, brick-575, brick-625, brick-675, brick-725, brick-775, brick-825, brick-875, brick-925, brick-975
+//   Variants: brick-cold, brick-cool, brick-hot, brick-intense, brick-muted, brick-soft, brick-vivid, brick-warm
+
+// BRONZE FAMILY (38 colors):
+//   Standard: bronze-50, bronze-100, bronze-200, bronze-300, bronze-400, bronze-500, bronze-600, bronze-700, bronze-800, bronze-900
+//   Micro: bronze-25, bronze-75, bronze-125, bronze-175, bronze-225, bronze-275, bronze-325, bronze-375, bronze-425, bronze-475, bronze-525, bronze-575, bronze-625, bronze-675, bronze-725, bronze-775, bronze-825, bronze-875, bronze-925, bronze-975
+//   Variants: bronze-cold, bronze-cool, bronze-hot, bronze-intense, bronze-muted, bronze-soft, bronze-vivid, bronze-warm
+
+// BURLYWOOD FAMILY (38 colors):
+//   Standard: burlyWood-50, burlyWood-100, burlyWood-200, burlyWood-300, burlyWood-400, burlyWood-500, burlyWood-600, burlyWood-700, burlyWood-800, burlyWood-900
+//   Micro: burlyWood-25, burlyWood-75, burlyWood-125, burlyWood-175, burlyWood-225, burlyWood-275, burlyWood-325, burlyWood-375, burlyWood-425, burlyWood-475, burlyWood-525, burlyWood-575, burlyWood-625, burlyWood-675, burlyWood-725, burlyWood-775, burlyWood-825, burlyWood-875, burlyWood-925, burlyWood-975
+//   Variants: burlyWood-cold, burlyWood-cool, burlyWood-hot, burlyWood-intense, burlyWood-muted, burlyWood-soft, burlyWood-vivid, burlyWood-warm
+
+// CADETBLUE FAMILY (38 colors):
+//   Standard: cadetBlue-50, cadetBlue-100, cadetBlue-200, cadetBlue-300, cadetBlue-400, cadetBlue-500, cadetBlue-600, cadetBlue-700, cadetBlue-800, cadetBlue-900
+//   Micro: cadetBlue-25, cadetBlue-75, cadetBlue-125, cadetBlue-175, cadetBlue-225, cadetBlue-275, cadetBlue-325, cadetBlue-375, cadetBlue-425, cadetBlue-475, cadetBlue-525, cadetBlue-575, cadetBlue-625, cadetBlue-675, cadetBlue-725, cadetBlue-775, cadetBlue-825, cadetBlue-875, cadetBlue-925, cadetBlue-975
+//   Variants: cadetBlue-cold, cadetBlue-cool, cadetBlue-hot, cadetBlue-intense, cadetBlue-muted, cadetBlue-soft, cadetBlue-vivid, cadetBlue-warm
+
+// CHARTREUSE FAMILY (38 colors):
+//   Standard: chartreuse-50, chartreuse-100, chartreuse-200, chartreuse-300, chartreuse-400, chartreuse-500, chartreuse-600, chartreuse-700, chartreuse-800, chartreuse-900
+//   Micro: chartreuse-25, chartreuse-75, chartreuse-125, chartreuse-175, chartreuse-225, chartreuse-275, chartreuse-325, chartreuse-375, chartreuse-425, chartreuse-475, chartreuse-525, chartreuse-575, chartreuse-625, chartreuse-675, chartreuse-725, chartreuse-775, chartreuse-825, chartreuse-875, chartreuse-925, chartreuse-975
+//   Variants: chartreuse-cold, chartreuse-cool, chartreuse-hot, chartreuse-intense, chartreuse-muted, chartreuse-soft, chartreuse-vivid, chartreuse-warm
+
+// CHERRY FAMILY (38 colors):
+//   Standard: cherry-50, cherry-100, cherry-200, cherry-300, cherry-400, cherry-500, cherry-600, cherry-700, cherry-800, cherry-900
+//   Micro: cherry-25, cherry-75, cherry-125, cherry-175, cherry-225, cherry-275, cherry-325, cherry-375, cherry-425, cherry-475, cherry-525, cherry-575, cherry-625, cherry-675, cherry-725, cherry-775, cherry-825, cherry-875, cherry-925, cherry-975
+//   Variants: cherry-cold, cherry-cool, cherry-hot, cherry-intense, cherry-muted, cherry-soft, cherry-vivid, cherry-warm
+
+// CHOCOLATE FAMILY (38 colors):
+//   Standard: chocolate-50, chocolate-100, chocolate-200, chocolate-300, chocolate-400, chocolate-500, chocolate-600, chocolate-700, chocolate-800, chocolate-900
+//   Micro: chocolate-25, chocolate-75, chocolate-125, chocolate-175, chocolate-225, chocolate-275, chocolate-325, chocolate-375, chocolate-425, chocolate-475, chocolate-525, chocolate-575, chocolate-625, chocolate-675, chocolate-725, chocolate-775, chocolate-825, chocolate-875, chocolate-925, chocolate-975
+//   Variants: chocolate-cold, chocolate-cool, chocolate-hot, chocolate-intense, chocolate-muted, chocolate-soft, chocolate-vivid, chocolate-warm
+
+// CHROME FAMILY (38 colors):
+//   Standard: chrome-50, chrome-100, chrome-200, chrome-300, chrome-400, chrome-500, chrome-600, chrome-700, chrome-800, chrome-900
+//   Micro: chrome-25, chrome-75, chrome-125, chrome-175, chrome-225, chrome-275, chrome-325, chrome-375, chrome-425, chrome-475, chrome-525, chrome-575, chrome-625, chrome-675, chrome-725, chrome-775, chrome-825, chrome-875, chrome-925, chrome-975
+//   Variants: chrome-cold, chrome-cool, chrome-hot, chrome-intense, chrome-muted, chrome-soft, chrome-vivid, chrome-warm
+
+// CLAY FAMILY (38 colors):
+//   Standard: clay-50, clay-100, clay-200, clay-300, clay-400, clay-500, clay-600, clay-700, clay-800, clay-900
+//   Micro: clay-25, clay-75, clay-125, clay-175, clay-225, clay-275, clay-325, clay-375, clay-425, clay-475, clay-525, clay-575, clay-625, clay-675, clay-725, clay-775, clay-825, clay-875, clay-925, clay-975
+//   Variants: clay-cold, clay-cool, clay-hot, clay-intense, clay-muted, clay-soft, clay-vivid, clay-warm
+
+// CLOUD FAMILY (38 colors):
+//   Standard: cloud-50, cloud-100, cloud-200, cloud-300, cloud-400, cloud-500, cloud-600, cloud-700, cloud-800, cloud-900
+//   Micro: cloud-25, cloud-75, cloud-125, cloud-175, cloud-225, cloud-275, cloud-325, cloud-375, cloud-425, cloud-475, cloud-525, cloud-575, cloud-625, cloud-675, cloud-725, cloud-775, cloud-825, cloud-875, cloud-925, cloud-975
+//   Variants: cloud-cold, cloud-cool, cloud-hot, cloud-intense, cloud-muted, cloud-soft, cloud-vivid, cloud-warm
+
+// COPPER FAMILY (38 colors):
+//   Standard: copper-50, copper-100, copper-200, copper-300, copper-400, copper-500, copper-600, copper-700, copper-800, copper-900
+//   Micro: copper-25, copper-75, copper-125, copper-175, copper-225, copper-275, copper-325, copper-375, copper-425, copper-475, copper-525, copper-575, copper-625, copper-675, copper-725, copper-775, copper-825, copper-875, copper-925, copper-975
+//   Variants: copper-cold, copper-cool, copper-hot, copper-intense, copper-muted, copper-soft, copper-vivid, copper-warm
+
+// CORAL FAMILY (38 colors):
+//   Standard: coral-50, coral-100, coral-200, coral-300, coral-400, coral-500, coral-600, coral-700, coral-800, coral-900
+//   Micro: coral-25, coral-75, coral-125, coral-175, coral-225, coral-275, coral-325, coral-375, coral-425, coral-475, coral-525, coral-575, coral-625, coral-675, coral-725, coral-775, coral-825, coral-875, coral-925, coral-975
+//   Variants: coral-cold, coral-cool, coral-hot, coral-intense, coral-muted, coral-soft, coral-vivid, coral-warm
+
+// CORNFLOWERBLUE FAMILY (38 colors):
+//   Standard: cornflowerBlue-50, cornflowerBlue-100, cornflowerBlue-200, cornflowerBlue-300, cornflowerBlue-400, cornflowerBlue-500, cornflowerBlue-600, cornflowerBlue-700, cornflowerBlue-800, cornflowerBlue-900
+//   Micro: cornflowerBlue-25, cornflowerBlue-75, cornflowerBlue-125, cornflowerBlue-175, cornflowerBlue-225, cornflowerBlue-275, cornflowerBlue-325, cornflowerBlue-375, cornflowerBlue-425, cornflowerBlue-475, cornflowerBlue-525, cornflowerBlue-575, cornflowerBlue-625, cornflowerBlue-675, cornflowerBlue-725, cornflowerBlue-775, cornflowerBlue-825, cornflowerBlue-875, cornflowerBlue-925, cornflowerBlue-975
+//   Variants: cornflowerBlue-cold, cornflowerBlue-cool, cornflowerBlue-hot, cornflowerBlue-intense, cornflowerBlue-muted, cornflowerBlue-soft, cornflowerBlue-vivid, cornflowerBlue-warm
+
+// CORNSILK FAMILY (38 colors):
+//   Standard: cornsilk-50, cornsilk-100, cornsilk-200, cornsilk-300, cornsilk-400, cornsilk-500, cornsilk-600, cornsilk-700, cornsilk-800, cornsilk-900
+//   Micro: cornsilk-25, cornsilk-75, cornsilk-125, cornsilk-175, cornsilk-225, cornsilk-275, cornsilk-325, cornsilk-375, cornsilk-425, cornsilk-475, cornsilk-525, cornsilk-575, cornsilk-625, cornsilk-675, cornsilk-725, cornsilk-775, cornsilk-825, cornsilk-875, cornsilk-925, cornsilk-975
+//   Variants: cornsilk-cold, cornsilk-cool, cornsilk-hot, cornsilk-intense, cornsilk-muted, cornsilk-soft, cornsilk-vivid, cornsilk-warm
+
+// CRIMSON FAMILY (38 colors):
+//   Standard: crimson-50, crimson-100, crimson-200, crimson-300, crimson-400, crimson-500, crimson-600, crimson-700, crimson-800, crimson-900
+//   Micro: crimson-25, crimson-75, crimson-125, crimson-175, crimson-225, crimson-275, crimson-325, crimson-375, crimson-425, crimson-475, crimson-525, crimson-575, crimson-625, crimson-675, crimson-725, crimson-775, crimson-825, crimson-875, crimson-925, crimson-975
+//   Variants: crimson-cold, crimson-cool, crimson-hot, crimson-intense, crimson-muted, crimson-soft, crimson-vivid, crimson-warm
+
+// CYAN FAMILY (38 colors):
+//   Standard: cyan-50, cyan-100, cyan-200, cyan-300, cyan-400, cyan-500, cyan-600, cyan-700, cyan-800, cyan-900
+//   Micro: cyan-25, cyan-75, cyan-125, cyan-175, cyan-225, cyan-275, cyan-325, cyan-375, cyan-425, cyan-475, cyan-525, cyan-575, cyan-625, cyan-675, cyan-725, cyan-775, cyan-825, cyan-875, cyan-925, cyan-975
+//   Variants: cyan-cold, cyan-cool, cyan-hot, cyan-intense, cyan-muted, cyan-soft, cyan-vivid, cyan-warm
+
+// DARKBLUE FAMILY (38 colors):
+//   Standard: darkBlue-50, darkBlue-100, darkBlue-200, darkBlue-300, darkBlue-400, darkBlue-500, darkBlue-600, darkBlue-700, darkBlue-800, darkBlue-900
+//   Micro: darkBlue-25, darkBlue-75, darkBlue-125, darkBlue-175, darkBlue-225, darkBlue-275, darkBlue-325, darkBlue-375, darkBlue-425, darkBlue-475, darkBlue-525, darkBlue-575, darkBlue-625, darkBlue-675, darkBlue-725, darkBlue-775, darkBlue-825, darkBlue-875, darkBlue-925, darkBlue-975
+//   Variants: darkBlue-cold, darkBlue-cool, darkBlue-hot, darkBlue-intense, darkBlue-muted, darkBlue-soft, darkBlue-vivid, darkBlue-warm
+
+// DARKCYAN FAMILY (38 colors):
+//   Standard: darkCyan-50, darkCyan-100, darkCyan-200, darkCyan-300, darkCyan-400, darkCyan-500, darkCyan-600, darkCyan-700, darkCyan-800, darkCyan-900
+//   Micro: darkCyan-25, darkCyan-75, darkCyan-125, darkCyan-175, darkCyan-225, darkCyan-275, darkCyan-325, darkCyan-375, darkCyan-425, darkCyan-475, darkCyan-525, darkCyan-575, darkCyan-625, darkCyan-675, darkCyan-725, darkCyan-775, darkCyan-825, darkCyan-875, darkCyan-925, darkCyan-975
+//   Variants: darkCyan-cold, darkCyan-cool, darkCyan-hot, darkCyan-intense, darkCyan-muted, darkCyan-soft, darkCyan-vivid, darkCyan-warm
+
+// DARKGOLDENROD FAMILY (38 colors):
+//   Standard: darkGoldenrod-50, darkGoldenrod-100, darkGoldenrod-200, darkGoldenrod-300, darkGoldenrod-400, darkGoldenrod-500, darkGoldenrod-600, darkGoldenrod-700, darkGoldenrod-800, darkGoldenrod-900
+//   Micro: darkGoldenrod-25, darkGoldenrod-75, darkGoldenrod-125, darkGoldenrod-175, darkGoldenrod-225, darkGoldenrod-275, darkGoldenrod-325, darkGoldenrod-375, darkGoldenrod-425, darkGoldenrod-475, darkGoldenrod-525, darkGoldenrod-575, darkGoldenrod-625, darkGoldenrod-675, darkGoldenrod-725, darkGoldenrod-775, darkGoldenrod-825, darkGoldenrod-875, darkGoldenrod-925, darkGoldenrod-975
+//   Variants: darkGoldenrod-cold, darkGoldenrod-cool, darkGoldenrod-hot, darkGoldenrod-intense, darkGoldenrod-muted, darkGoldenrod-soft, darkGoldenrod-vivid, darkGoldenrod-warm
+
+// DARKGRAY FAMILY (38 colors):
+//   Standard: darkGray-50, darkGray-100, darkGray-200, darkGray-300, darkGray-400, darkGray-500, darkGray-600, darkGray-700, darkGray-800, darkGray-900
+//   Micro: darkGray-25, darkGray-75, darkGray-125, darkGray-175, darkGray-225, darkGray-275, darkGray-325, darkGray-375, darkGray-425, darkGray-475, darkGray-525, darkGray-575, darkGray-625, darkGray-675, darkGray-725, darkGray-775, darkGray-825, darkGray-875, darkGray-925, darkGray-975
+//   Variants: darkGray-cold, darkGray-cool, darkGray-hot, darkGray-intense, darkGray-muted, darkGray-soft, darkGray-vivid, darkGray-warm
+
+// DARKGREEN FAMILY (38 colors):
+//   Standard: darkGreen-50, darkGreen-100, darkGreen-200, darkGreen-300, darkGreen-400, darkGreen-500, darkGreen-600, darkGreen-700, darkGreen-800, darkGreen-900
+//   Micro: darkGreen-25, darkGreen-75, darkGreen-125, darkGreen-175, darkGreen-225, darkGreen-275, darkGreen-325, darkGreen-375, darkGreen-425, darkGreen-475, darkGreen-525, darkGreen-575, darkGreen-625, darkGreen-675, darkGreen-725, darkGreen-775, darkGreen-825, darkGreen-875, darkGreen-925, darkGreen-975
+//   Variants: darkGreen-cold, darkGreen-cool, darkGreen-hot, darkGreen-intense, darkGreen-muted, darkGreen-soft, darkGreen-vivid, darkGreen-warm
+
+// DARKKHAKI FAMILY (38 colors):
+//   Standard: darkKhaki-50, darkKhaki-100, darkKhaki-200, darkKhaki-300, darkKhaki-400, darkKhaki-500, darkKhaki-600, darkKhaki-700, darkKhaki-800, darkKhaki-900
+//   Micro: darkKhaki-25, darkKhaki-75, darkKhaki-125, darkKhaki-175, darkKhaki-225, darkKhaki-275, darkKhaki-325, darkKhaki-375, darkKhaki-425, darkKhaki-475, darkKhaki-525, darkKhaki-575, darkKhaki-625, darkKhaki-675, darkKhaki-725, darkKhaki-775, darkKhaki-825, darkKhaki-875, darkKhaki-925, darkKhaki-975
+//   Variants: darkKhaki-cold, darkKhaki-cool, darkKhaki-hot, darkKhaki-intense, darkKhaki-muted, darkKhaki-soft, darkKhaki-vivid, darkKhaki-warm
+
+// DARKMAGENTA FAMILY (38 colors):
+//   Standard: darkMagenta-50, darkMagenta-100, darkMagenta-200, darkMagenta-300, darkMagenta-400, darkMagenta-500, darkMagenta-600, darkMagenta-700, darkMagenta-800, darkMagenta-900
+//   Micro: darkMagenta-25, darkMagenta-75, darkMagenta-125, darkMagenta-175, darkMagenta-225, darkMagenta-275, darkMagenta-325, darkMagenta-375, darkMagenta-425, darkMagenta-475, darkMagenta-525, darkMagenta-575, darkMagenta-625, darkMagenta-675, darkMagenta-725, darkMagenta-775, darkMagenta-825, darkMagenta-875, darkMagenta-925, darkMagenta-975
+//   Variants: darkMagenta-cold, darkMagenta-cool, darkMagenta-hot, darkMagenta-intense, darkMagenta-muted, darkMagenta-soft, darkMagenta-vivid, darkMagenta-warm
+
+// DARKORANGE FAMILY (38 colors):
+//   Standard: darkOrange-50, darkOrange-100, darkOrange-200, darkOrange-300, darkOrange-400, darkOrange-500, darkOrange-600, darkOrange-700, darkOrange-800, darkOrange-900
+//   Micro: darkOrange-25, darkOrange-75, darkOrange-125, darkOrange-175, darkOrange-225, darkOrange-275, darkOrange-325, darkOrange-375, darkOrange-425, darkOrange-475, darkOrange-525, darkOrange-575, darkOrange-625, darkOrange-675, darkOrange-725, darkOrange-775, darkOrange-825, darkOrange-875, darkOrange-925, darkOrange-975
+//   Variants: darkOrange-cold, darkOrange-cool, darkOrange-hot, darkOrange-intense, darkOrange-muted, darkOrange-soft, darkOrange-vivid, darkOrange-warm
+
+// DARKORCHID FAMILY (38 colors):
+//   Standard: darkOrchid-50, darkOrchid-100, darkOrchid-200, darkOrchid-300, darkOrchid-400, darkOrchid-500, darkOrchid-600, darkOrchid-700, darkOrchid-800, darkOrchid-900
+//   Micro: darkOrchid-25, darkOrchid-75, darkOrchid-125, darkOrchid-175, darkOrchid-225, darkOrchid-275, darkOrchid-325, darkOrchid-375, darkOrchid-425, darkOrchid-475, darkOrchid-525, darkOrchid-575, darkOrchid-625, darkOrchid-675, darkOrchid-725, darkOrchid-775, darkOrchid-825, darkOrchid-875, darkOrchid-925, darkOrchid-975
+//   Variants: darkOrchid-cold, darkOrchid-cool, darkOrchid-hot, darkOrchid-intense, darkOrchid-muted, darkOrchid-soft, darkOrchid-vivid, darkOrchid-warm
+
+// DARKRED FAMILY (38 colors):
+//   Standard: darkRed-50, darkRed-100, darkRed-200, darkRed-300, darkRed-400, darkRed-500, darkRed-600, darkRed-700, darkRed-800, darkRed-900
+//   Micro: darkRed-25, darkRed-75, darkRed-125, darkRed-175, darkRed-225, darkRed-275, darkRed-325, darkRed-375, darkRed-425, darkRed-475, darkRed-525, darkRed-575, darkRed-625, darkRed-675, darkRed-725, darkRed-775, darkRed-825, darkRed-875, darkRed-925, darkRed-975
+//   Variants: darkRed-cold, darkRed-cool, darkRed-hot, darkRed-intense, darkRed-muted, darkRed-soft, darkRed-vivid, darkRed-warm
+
+// DARKSALMON FAMILY (38 colors):
+//   Standard: darkSalmon-50, darkSalmon-100, darkSalmon-200, darkSalmon-300, darkSalmon-400, darkSalmon-500, darkSalmon-600, darkSalmon-700, darkSalmon-800, darkSalmon-900
+//   Micro: darkSalmon-25, darkSalmon-75, darkSalmon-125, darkSalmon-175, darkSalmon-225, darkSalmon-275, darkSalmon-325, darkSalmon-375, darkSalmon-425, darkSalmon-475, darkSalmon-525, darkSalmon-575, darkSalmon-625, darkSalmon-675, darkSalmon-725, darkSalmon-775, darkSalmon-825, darkSalmon-875, darkSalmon-925, darkSalmon-975
+//   Variants: darkSalmon-cold, darkSalmon-cool, darkSalmon-hot, darkSalmon-intense, darkSalmon-muted, darkSalmon-soft, darkSalmon-vivid, darkSalmon-warm
+
+// DARKSEAGREEN FAMILY (38 colors):
+//   Standard: darkSeaGreen-50, darkSeaGreen-100, darkSeaGreen-200, darkSeaGreen-300, darkSeaGreen-400, darkSeaGreen-500, darkSeaGreen-600, darkSeaGreen-700, darkSeaGreen-800, darkSeaGreen-900
+//   Micro: darkSeaGreen-25, darkSeaGreen-75, darkSeaGreen-125, darkSeaGreen-175, darkSeaGreen-225, darkSeaGreen-275, darkSeaGreen-325, darkSeaGreen-375, darkSeaGreen-425, darkSeaGreen-475, darkSeaGreen-525, darkSeaGreen-575, darkSeaGreen-625, darkSeaGreen-675, darkSeaGreen-725, darkSeaGreen-775, darkSeaGreen-825, darkSeaGreen-875, darkSeaGreen-925, darkSeaGreen-975
+//   Variants: darkSeaGreen-cold, darkSeaGreen-cool, darkSeaGreen-hot, darkSeaGreen-intense, darkSeaGreen-muted, darkSeaGreen-soft, darkSeaGreen-vivid, darkSeaGreen-warm
+
+// DARKSLATEBLUE FAMILY (38 colors):
+//   Standard: darkSlateBlue-50, darkSlateBlue-100, darkSlateBlue-200, darkSlateBlue-300, darkSlateBlue-400, darkSlateBlue-500, darkSlateBlue-600, darkSlateBlue-700, darkSlateBlue-800, darkSlateBlue-900
+//   Micro: darkSlateBlue-25, darkSlateBlue-75, darkSlateBlue-125, darkSlateBlue-175, darkSlateBlue-225, darkSlateBlue-275, darkSlateBlue-325, darkSlateBlue-375, darkSlateBlue-425, darkSlateBlue-475, darkSlateBlue-525, darkSlateBlue-575, darkSlateBlue-625, darkSlateBlue-675, darkSlateBlue-725, darkSlateBlue-775, darkSlateBlue-825, darkSlateBlue-875, darkSlateBlue-925, darkSlateBlue-975
+//   Variants: darkSlateBlue-cold, darkSlateBlue-cool, darkSlateBlue-hot, darkSlateBlue-intense, darkSlateBlue-muted, darkSlateBlue-soft, darkSlateBlue-vivid, darkSlateBlue-warm
+
+// DARKSLATEGRAY FAMILY (38 colors):
+//   Standard: darkSlateGray-50, darkSlateGray-100, darkSlateGray-200, darkSlateGray-300, darkSlateGray-400, darkSlateGray-500, darkSlateGray-600, darkSlateGray-700, darkSlateGray-800, darkSlateGray-900
+//   Micro: darkSlateGray-25, darkSlateGray-75, darkSlateGray-125, darkSlateGray-175, darkSlateGray-225, darkSlateGray-275, darkSlateGray-325, darkSlateGray-375, darkSlateGray-425, darkSlateGray-475, darkSlateGray-525, darkSlateGray-575, darkSlateGray-625, darkSlateGray-675, darkSlateGray-725, darkSlateGray-775, darkSlateGray-825, darkSlateGray-875, darkSlateGray-925, darkSlateGray-975
+//   Variants: darkSlateGray-cold, darkSlateGray-cool, darkSlateGray-hot, darkSlateGray-intense, darkSlateGray-muted, darkSlateGray-soft, darkSlateGray-vivid, darkSlateGray-warm
+
+// DARKTURQUOISE FAMILY (38 colors):
+//   Standard: darkTurquoise-50, darkTurquoise-100, darkTurquoise-200, darkTurquoise-300, darkTurquoise-400, darkTurquoise-500, darkTurquoise-600, darkTurquoise-700, darkTurquoise-800, darkTurquoise-900
+//   Micro: darkTurquoise-25, darkTurquoise-75, darkTurquoise-125, darkTurquoise-175, darkTurquoise-225, darkTurquoise-275, darkTurquoise-325, darkTurquoise-375, darkTurquoise-425, darkTurquoise-475, darkTurquoise-525, darkTurquoise-575, darkTurquoise-625, darkTurquoise-675, darkTurquoise-725, darkTurquoise-775, darkTurquoise-825, darkTurquoise-875, darkTurquoise-925, darkTurquoise-975
+//   Variants: darkTurquoise-cold, darkTurquoise-cool, darkTurquoise-hot, darkTurquoise-intense, darkTurquoise-muted, darkTurquoise-soft, darkTurquoise-vivid, darkTurquoise-warm
+
+// DARKVIOLET FAMILY (38 colors):
+//   Standard: darkViolet-50, darkViolet-100, darkViolet-200, darkViolet-300, darkViolet-400, darkViolet-500, darkViolet-600, darkViolet-700, darkViolet-800, darkViolet-900
+//   Micro: darkViolet-25, darkViolet-75, darkViolet-125, darkViolet-175, darkViolet-225, darkViolet-275, darkViolet-325, darkViolet-375, darkViolet-425, darkViolet-475, darkViolet-525, darkViolet-575, darkViolet-625, darkViolet-675, darkViolet-725, darkViolet-775, darkViolet-825, darkViolet-875, darkViolet-925, darkViolet-975
+//   Variants: darkViolet-cold, darkViolet-cool, darkViolet-hot, darkViolet-intense, darkViolet-muted, darkViolet-soft, darkViolet-vivid, darkViolet-warm
+
+// DARKORANGE FAMILY (38 colors):
+//   Standard: darkorange-50, darkorange-100, darkorange-200, darkorange-300, darkorange-400, darkorange-500, darkorange-600, darkorange-700, darkorange-800, darkorange-900
+//   Micro: darkorange-25, darkorange-75, darkorange-125, darkorange-175, darkorange-225, darkorange-275, darkorange-325, darkorange-375, darkorange-425, darkorange-475, darkorange-525, darkorange-575, darkorange-625, darkorange-675, darkorange-725, darkorange-775, darkorange-825, darkorange-875, darkorange-925, darkorange-975
+//   Variants: darkorange-cold, darkorange-cool, darkorange-hot, darkorange-intense, darkorange-muted, darkorange-soft, darkorange-vivid, darkorange-warm
+
+// DEEPPINK FAMILY (38 colors):
+//   Standard: deepPink-50, deepPink-100, deepPink-200, deepPink-300, deepPink-400, deepPink-500, deepPink-600, deepPink-700, deepPink-800, deepPink-900
+//   Micro: deepPink-25, deepPink-75, deepPink-125, deepPink-175, deepPink-225, deepPink-275, deepPink-325, deepPink-375, deepPink-425, deepPink-475, deepPink-525, deepPink-575, deepPink-625, deepPink-675, deepPink-725, deepPink-775, deepPink-825, deepPink-875, deepPink-925, deepPink-975
+//   Variants: deepPink-cold, deepPink-cool, deepPink-hot, deepPink-intense, deepPink-muted, deepPink-soft, deepPink-vivid, deepPink-warm
+
+// DEEPSKYBLUE FAMILY (38 colors):
+//   Standard: deepSkyBlue-50, deepSkyBlue-100, deepSkyBlue-200, deepSkyBlue-300, deepSkyBlue-400, deepSkyBlue-500, deepSkyBlue-600, deepSkyBlue-700, deepSkyBlue-800, deepSkyBlue-900
+//   Micro: deepSkyBlue-25, deepSkyBlue-75, deepSkyBlue-125, deepSkyBlue-175, deepSkyBlue-225, deepSkyBlue-275, deepSkyBlue-325, deepSkyBlue-375, deepSkyBlue-425, deepSkyBlue-475, deepSkyBlue-525, deepSkyBlue-575, deepSkyBlue-625, deepSkyBlue-675, deepSkyBlue-725, deepSkyBlue-775, deepSkyBlue-825, deepSkyBlue-875, deepSkyBlue-925, deepSkyBlue-975
+//   Variants: deepSkyBlue-cold, deepSkyBlue-cool, deepSkyBlue-hot, deepSkyBlue-intense, deepSkyBlue-muted, deepSkyBlue-soft, deepSkyBlue-vivid, deepSkyBlue-warm
+
+// DIAMOND FAMILY (38 colors):
+//   Standard: diamond-50, diamond-100, diamond-200, diamond-300, diamond-400, diamond-500, diamond-600, diamond-700, diamond-800, diamond-900
+//   Micro: diamond-25, diamond-75, diamond-125, diamond-175, diamond-225, diamond-275, diamond-325, diamond-375, diamond-425, diamond-475, diamond-525, diamond-575, diamond-625, diamond-675, diamond-725, diamond-775, diamond-825, diamond-875, diamond-925, diamond-975
+//   Variants: diamond-cold, diamond-cool, diamond-hot, diamond-intense, diamond-muted, diamond-soft, diamond-vivid, diamond-warm
+
+// DIMGRAY FAMILY (38 colors):
+//   Standard: dimGray-50, dimGray-100, dimGray-200, dimGray-300, dimGray-400, dimGray-500, dimGray-600, dimGray-700, dimGray-800, dimGray-900
+//   Micro: dimGray-25, dimGray-75, dimGray-125, dimGray-175, dimGray-225, dimGray-275, dimGray-325, dimGray-375, dimGray-425, dimGray-475, dimGray-525, dimGray-575, dimGray-625, dimGray-675, dimGray-725, dimGray-775, dimGray-825, dimGray-875, dimGray-925, dimGray-975
+//   Variants: dimGray-cold, dimGray-cool, dimGray-hot, dimGray-intense, dimGray-muted, dimGray-soft, dimGray-vivid, dimGray-warm
+
+// DODGERBLUE FAMILY (38 colors):
+//   Standard: dodgerBlue-50, dodgerBlue-100, dodgerBlue-200, dodgerBlue-300, dodgerBlue-400, dodgerBlue-500, dodgerBlue-600, dodgerBlue-700, dodgerBlue-800, dodgerBlue-900
+//   Micro: dodgerBlue-25, dodgerBlue-75, dodgerBlue-125, dodgerBlue-175, dodgerBlue-225, dodgerBlue-275, dodgerBlue-325, dodgerBlue-375, dodgerBlue-425, dodgerBlue-475, dodgerBlue-525, dodgerBlue-575, dodgerBlue-625, dodgerBlue-675, dodgerBlue-725, dodgerBlue-775, dodgerBlue-825, dodgerBlue-875, dodgerBlue-925, dodgerBlue-975
+//   Variants: dodgerBlue-cold, dodgerBlue-cool, dodgerBlue-hot, dodgerBlue-intense, dodgerBlue-muted, dodgerBlue-soft, dodgerBlue-vivid, dodgerBlue-warm
+
+// EARTH FAMILY (38 colors):
+//   Standard: earth-50, earth-100, earth-200, earth-300, earth-400, earth-500, earth-600, earth-700, earth-800, earth-900
+//   Micro: earth-25, earth-75, earth-125, earth-175, earth-225, earth-275, earth-325, earth-375, earth-425, earth-475, earth-525, earth-575, earth-625, earth-675, earth-725, earth-775, earth-825, earth-875, earth-925, earth-975
+//   Variants: earth-cold, earth-cool, earth-hot, earth-intense, earth-muted, earth-soft, earth-vivid, earth-warm
+
+// EMERALD FAMILY (38 colors):
+//   Standard: emerald-50, emerald-100, emerald-200, emerald-300, emerald-400, emerald-500, emerald-600, emerald-700, emerald-800, emerald-900
+//   Micro: emerald-25, emerald-75, emerald-125, emerald-175, emerald-225, emerald-275, emerald-325, emerald-375, emerald-425, emerald-475, emerald-525, emerald-575, emerald-625, emerald-675, emerald-725, emerald-775, emerald-825, emerald-875, emerald-925, emerald-975
+//   Variants: emerald-cold, emerald-cool, emerald-hot, emerald-intense, emerald-muted, emerald-soft, emerald-vivid, emerald-warm
+
+// FERN FAMILY (38 colors):
+//   Standard: fern-50, fern-100, fern-200, fern-300, fern-400, fern-500, fern-600, fern-700, fern-800, fern-900
+//   Micro: fern-25, fern-75, fern-125, fern-175, fern-225, fern-275, fern-325, fern-375, fern-425, fern-475, fern-525, fern-575, fern-625, fern-675, fern-725, fern-775, fern-825, fern-875, fern-925, fern-975
+//   Variants: fern-cold, fern-cool, fern-hot, fern-intense, fern-muted, fern-soft, fern-vivid, fern-warm
+
+// FIREBRICK FAMILY (38 colors):
+//   Standard: firebrick-50, firebrick-100, firebrick-200, firebrick-300, firebrick-400, firebrick-500, firebrick-600, firebrick-700, firebrick-800, firebrick-900
+//   Micro: firebrick-25, firebrick-75, firebrick-125, firebrick-175, firebrick-225, firebrick-275, firebrick-325, firebrick-375, firebrick-425, firebrick-475, firebrick-525, firebrick-575, firebrick-625, firebrick-675, firebrick-725, firebrick-775, firebrick-825, firebrick-875, firebrick-925, firebrick-975
+//   Variants: firebrick-cold, firebrick-cool, firebrick-hot, firebrick-intense, firebrick-muted, firebrick-soft, firebrick-vivid, firebrick-warm
+
+// FLORALWHITE FAMILY (38 colors):
+//   Standard: floralWhite-50, floralWhite-100, floralWhite-200, floralWhite-300, floralWhite-400, floralWhite-500, floralWhite-600, floralWhite-700, floralWhite-800, floralWhite-900
+//   Micro: floralWhite-25, floralWhite-75, floralWhite-125, floralWhite-175, floralWhite-225, floralWhite-275, floralWhite-325, floralWhite-375, floralWhite-425, floralWhite-475, floralWhite-525, floralWhite-575, floralWhite-625, floralWhite-675, floralWhite-725, floralWhite-775, floralWhite-825, floralWhite-875, floralWhite-925, floralWhite-975
+//   Variants: floralWhite-cold, floralWhite-cool, floralWhite-hot, floralWhite-intense, floralWhite-muted, floralWhite-soft, floralWhite-vivid, floralWhite-warm
+
+// FOG FAMILY (38 colors):
+//   Standard: fog-50, fog-100, fog-200, fog-300, fog-400, fog-500, fog-600, fog-700, fog-800, fog-900
+//   Micro: fog-25, fog-75, fog-125, fog-175, fog-225, fog-275, fog-325, fog-375, fog-425, fog-475, fog-525, fog-575, fog-625, fog-675, fog-725, fog-775, fog-825, fog-875, fog-925, fog-975
+//   Variants: fog-cold, fog-cool, fog-hot, fog-intense, fog-muted, fog-soft, fog-vivid, fog-warm
+
+// FOREST FAMILY (38 colors):
+//   Standard: forest-50, forest-100, forest-200, forest-300, forest-400, forest-500, forest-600, forest-700, forest-800, forest-900
+//   Micro: forest-25, forest-75, forest-125, forest-175, forest-225, forest-275, forest-325, forest-375, forest-425, forest-475, forest-525, forest-575, forest-625, forest-675, forest-725, forest-775, forest-825, forest-875, forest-925, forest-975
+//   Variants: forest-cold, forest-cool, forest-hot, forest-intense, forest-muted, forest-soft, forest-vivid, forest-warm
+
+// FORESTGREEN FAMILY (38 colors):
+//   Standard: forestGreen-50, forestGreen-100, forestGreen-200, forestGreen-300, forestGreen-400, forestGreen-500, forestGreen-600, forestGreen-700, forestGreen-800, forestGreen-900
+//   Micro: forestGreen-25, forestGreen-75, forestGreen-125, forestGreen-175, forestGreen-225, forestGreen-275, forestGreen-325, forestGreen-375, forestGreen-425, forestGreen-475, forestGreen-525, forestGreen-575, forestGreen-625, forestGreen-675, forestGreen-725, forestGreen-775, forestGreen-825, forestGreen-875, forestGreen-925, forestGreen-975
+//   Variants: forestGreen-cold, forestGreen-cool, forestGreen-hot, forestGreen-intense, forestGreen-muted, forestGreen-soft, forestGreen-vivid, forestGreen-warm
+
+// FROST FAMILY (38 colors):
+//   Standard: frost-50, frost-100, frost-200, frost-300, frost-400, frost-500, frost-600, frost-700, frost-800, frost-900
+//   Micro: frost-25, frost-75, frost-125, frost-175, frost-225, frost-275, frost-325, frost-375, frost-425, frost-475, frost-525, frost-575, frost-625, frost-675, frost-725, frost-775, frost-825, frost-875, frost-925, frost-975
+//   Variants: frost-cold, frost-cool, frost-hot, frost-intense, frost-muted, frost-soft, frost-vivid, frost-warm
+
+// FUCHSIA FAMILY (38 colors):
+//   Standard: fuchsia-50, fuchsia-100, fuchsia-200, fuchsia-300, fuchsia-400, fuchsia-500, fuchsia-600, fuchsia-700, fuchsia-800, fuchsia-900
+//   Micro: fuchsia-25, fuchsia-75, fuchsia-125, fuchsia-175, fuchsia-225, fuchsia-275, fuchsia-325, fuchsia-375, fuchsia-425, fuchsia-475, fuchsia-525, fuchsia-575, fuchsia-625, fuchsia-675, fuchsia-725, fuchsia-775, fuchsia-825, fuchsia-875, fuchsia-925, fuchsia-975
+//   Variants: fuchsia-cold, fuchsia-cool, fuchsia-hot, fuchsia-intense, fuchsia-muted, fuchsia-soft, fuchsia-vivid, fuchsia-warm
+
+// GAINSBORO FAMILY (38 colors):
+//   Standard: gainsboro-50, gainsboro-100, gainsboro-200, gainsboro-300, gainsboro-400, gainsboro-500, gainsboro-600, gainsboro-700, gainsboro-800, gainsboro-900
+//   Micro: gainsboro-25, gainsboro-75, gainsboro-125, gainsboro-175, gainsboro-225, gainsboro-275, gainsboro-325, gainsboro-375, gainsboro-425, gainsboro-475, gainsboro-525, gainsboro-575, gainsboro-625, gainsboro-675, gainsboro-725, gainsboro-775, gainsboro-825, gainsboro-875, gainsboro-925, gainsboro-975
+//   Variants: gainsboro-cold, gainsboro-cool, gainsboro-hot, gainsboro-intense, gainsboro-muted, gainsboro-soft, gainsboro-vivid, gainsboro-warm
+
+// GARNET FAMILY (38 colors):
+//   Standard: garnet-50, garnet-100, garnet-200, garnet-300, garnet-400, garnet-500, garnet-600, garnet-700, garnet-800, garnet-900
+//   Micro: garnet-25, garnet-75, garnet-125, garnet-175, garnet-225, garnet-275, garnet-325, garnet-375, garnet-425, garnet-475, garnet-525, garnet-575, garnet-625, garnet-675, garnet-725, garnet-775, garnet-825, garnet-875, garnet-925, garnet-975
+//   Variants: garnet-cold, garnet-cool, garnet-hot, garnet-intense, garnet-muted, garnet-soft, garnet-vivid, garnet-warm
+
+// GHOSTWHITE FAMILY (38 colors):
+//   Standard: ghostWhite-50, ghostWhite-100, ghostWhite-200, ghostWhite-300, ghostWhite-400, ghostWhite-500, ghostWhite-600, ghostWhite-700, ghostWhite-800, ghostWhite-900
+//   Micro: ghostWhite-25, ghostWhite-75, ghostWhite-125, ghostWhite-175, ghostWhite-225, ghostWhite-275, ghostWhite-325, ghostWhite-375, ghostWhite-425, ghostWhite-475, ghostWhite-525, ghostWhite-575, ghostWhite-625, ghostWhite-675, ghostWhite-725, ghostWhite-775, ghostWhite-825, ghostWhite-875, ghostWhite-925, ghostWhite-975
+//   Variants: ghostWhite-cold, ghostWhite-cool, ghostWhite-hot, ghostWhite-intense, ghostWhite-muted, ghostWhite-soft, ghostWhite-vivid, ghostWhite-warm
+
+// GOLD FAMILY (38 colors):
+//   Standard: gold-50, gold-100, gold-200, gold-300, gold-400, gold-500, gold-600, gold-700, gold-800, gold-900
+//   Micro: gold-25, gold-75, gold-125, gold-175, gold-225, gold-275, gold-325, gold-375, gold-425, gold-475, gold-525, gold-575, gold-625, gold-675, gold-725, gold-775, gold-825, gold-875, gold-925, gold-975
+//   Variants: gold-cold, gold-cool, gold-hot, gold-intense, gold-muted, gold-soft, gold-vivid, gold-warm
+
+// GOLDENROD FAMILY (38 colors):
+//   Standard: goldenrod-50, goldenrod-100, goldenrod-200, goldenrod-300, goldenrod-400, goldenrod-500, goldenrod-600, goldenrod-700, goldenrod-800, goldenrod-900
+//   Micro: goldenrod-25, goldenrod-75, goldenrod-125, goldenrod-175, goldenrod-225, goldenrod-275, goldenrod-325, goldenrod-375, goldenrod-425, goldenrod-475, goldenrod-525, goldenrod-575, goldenrod-625, goldenrod-675, goldenrod-725, goldenrod-775, goldenrod-825, goldenrod-875, goldenrod-925, goldenrod-975
+//   Variants: goldenrod-cold, goldenrod-cool, goldenrod-hot, goldenrod-intense, goldenrod-muted, goldenrod-soft, goldenrod-vivid, goldenrod-warm
+
+// GRAY FAMILY (38 colors):
+//   Standard: gray-50, gray-100, gray-200, gray-300, gray-400, gray-500, gray-600, gray-700, gray-800, gray-900
+//   Micro: gray-25, gray-75, gray-125, gray-175, gray-225, gray-275, gray-325, gray-375, gray-425, gray-475, gray-525, gray-575, gray-625, gray-675, gray-725, gray-775, gray-825, gray-875, gray-925, gray-975
+//   Variants: gray-cold, gray-cool, gray-hot, gray-intense, gray-muted, gray-soft, gray-vivid, gray-warm
+
+// GREEN FAMILY (38 colors):
+//   Standard: green-50, green-100, green-200, green-300, green-400, green-500, green-600, green-700, green-800, green-900
+//   Micro: green-25, green-75, green-125, green-175, green-225, green-275, green-325, green-375, green-425, green-475, green-525, green-575, green-625, green-675, green-725, green-775, green-825, green-875, green-925, green-975
+//   Variants: green-cold, green-cool, green-hot, green-intense, green-muted, green-soft, green-vivid, green-warm
+
+// GREENYELLOW FAMILY (38 colors):
+//   Standard: greenYellow-50, greenYellow-100, greenYellow-200, greenYellow-300, greenYellow-400, greenYellow-500, greenYellow-600, greenYellow-700, greenYellow-800, greenYellow-900
+//   Micro: greenYellow-25, greenYellow-75, greenYellow-125, greenYellow-175, greenYellow-225, greenYellow-275, greenYellow-325, greenYellow-375, greenYellow-425, greenYellow-475, greenYellow-525, greenYellow-575, greenYellow-625, greenYellow-675, greenYellow-725, greenYellow-775, greenYellow-825, greenYellow-875, greenYellow-925, greenYellow-975
+//   Variants: greenYellow-cold, greenYellow-cool, greenYellow-hot, greenYellow-intense, greenYellow-muted, greenYellow-soft, greenYellow-vivid, greenYellow-warm
+
+// HONEYDEW FAMILY (38 colors):
+//   Standard: honeydew-50, honeydew-100, honeydew-200, honeydew-300, honeydew-400, honeydew-500, honeydew-600, honeydew-700, honeydew-800, honeydew-900
+//   Micro: honeydew-25, honeydew-75, honeydew-125, honeydew-175, honeydew-225, honeydew-275, honeydew-325, honeydew-375, honeydew-425, honeydew-475, honeydew-525, honeydew-575, honeydew-625, honeydew-675, honeydew-725, honeydew-775, honeydew-825, honeydew-875, honeydew-925, honeydew-975
+//   Variants: honeydew-cold, honeydew-cool, honeydew-hot, honeydew-intense, honeydew-muted, honeydew-soft, honeydew-vivid, honeydew-warm
+
+// HOTPINK FAMILY (38 colors):
+//   Standard: hotPink-50, hotPink-100, hotPink-200, hotPink-300, hotPink-400, hotPink-500, hotPink-600, hotPink-700, hotPink-800, hotPink-900
+//   Micro: hotPink-25, hotPink-75, hotPink-125, hotPink-175, hotPink-225, hotPink-275, hotPink-325, hotPink-375, hotPink-425, hotPink-475, hotPink-525, hotPink-575, hotPink-625, hotPink-675, hotPink-725, hotPink-775, hotPink-825, hotPink-875, hotPink-925, hotPink-975
+//   Variants: hotPink-cold, hotPink-cool, hotPink-hot, hotPink-intense, hotPink-muted, hotPink-soft, hotPink-vivid, hotPink-warm
+
+// ICE FAMILY (38 colors):
+//   Standard: ice-50, ice-100, ice-200, ice-300, ice-400, ice-500, ice-600, ice-700, ice-800, ice-900
+//   Micro: ice-25, ice-75, ice-125, ice-175, ice-225, ice-275, ice-325, ice-375, ice-425, ice-475, ice-525, ice-575, ice-625, ice-675, ice-725, ice-775, ice-825, ice-875, ice-925, ice-975
+//   Variants: ice-cold, ice-cool, ice-hot, ice-intense, ice-muted, ice-soft, ice-vivid, ice-warm
+
+// INDIANRED FAMILY (38 colors):
+//   Standard: indianRed-50, indianRed-100, indianRed-200, indianRed-300, indianRed-400, indianRed-500, indianRed-600, indianRed-700, indianRed-800, indianRed-900
+//   Micro: indianRed-25, indianRed-75, indianRed-125, indianRed-175, indianRed-225, indianRed-275, indianRed-325, indianRed-375, indianRed-425, indianRed-475, indianRed-525, indianRed-575, indianRed-625, indianRed-675, indianRed-725, indianRed-775, indianRed-825, indianRed-875, indianRed-925, indianRed-975
+//   Variants: indianRed-cold, indianRed-cool, indianRed-hot, indianRed-intense, indianRed-muted, indianRed-soft, indianRed-vivid, indianRed-warm
+
+// INDIGO FAMILY (38 colors):
+//   Standard: indigo-50, indigo-100, indigo-200, indigo-300, indigo-400, indigo-500, indigo-600, indigo-700, indigo-800, indigo-900
+//   Micro: indigo-25, indigo-75, indigo-125, indigo-175, indigo-225, indigo-275, indigo-325, indigo-375, indigo-425, indigo-475, indigo-525, indigo-575, indigo-625, indigo-675, indigo-725, indigo-775, indigo-825, indigo-875, indigo-925, indigo-975
+//   Variants: indigo-cold, indigo-cool, indigo-hot, indigo-intense, indigo-muted, indigo-soft, indigo-vivid, indigo-warm
+
+// IRON FAMILY (38 colors):
+//   Standard: iron-50, iron-100, iron-200, iron-300, iron-400, iron-500, iron-600, iron-700, iron-800, iron-900
+//   Micro: iron-25, iron-75, iron-125, iron-175, iron-225, iron-275, iron-325, iron-375, iron-425, iron-475, iron-525, iron-575, iron-625, iron-675, iron-725, iron-775, iron-825, iron-875, iron-925, iron-975
+//   Variants: iron-cold, iron-cool, iron-hot, iron-intense, iron-muted, iron-soft, iron-vivid, iron-warm
+
+// IVORY FAMILY (38 colors):
+//   Standard: ivory-50, ivory-100, ivory-200, ivory-300, ivory-400, ivory-500, ivory-600, ivory-700, ivory-800, ivory-900
+//   Micro: ivory-25, ivory-75, ivory-125, ivory-175, ivory-225, ivory-275, ivory-325, ivory-375, ivory-425, ivory-475, ivory-525, ivory-575, ivory-625, ivory-675, ivory-725, ivory-775, ivory-825, ivory-875, ivory-925, ivory-975
+//   Variants: ivory-cold, ivory-cool, ivory-hot, ivory-intense, ivory-muted, ivory-soft, ivory-vivid, ivory-warm
+
+// JADE FAMILY (38 colors):
+//   Standard: jade-50, jade-100, jade-200, jade-300, jade-400, jade-500, jade-600, jade-700, jade-800, jade-900
+//   Micro: jade-25, jade-75, jade-125, jade-175, jade-225, jade-275, jade-325, jade-375, jade-425, jade-475, jade-525, jade-575, jade-625, jade-675, jade-725, jade-775, jade-825, jade-875, jade-925, jade-975
+//   Variants: jade-cold, jade-cool, jade-hot, jade-intense, jade-muted, jade-soft, jade-vivid, jade-warm
+
+// JUNGLE FAMILY (38 colors):
+//   Standard: jungle-50, jungle-100, jungle-200, jungle-300, jungle-400, jungle-500, jungle-600, jungle-700, jungle-800, jungle-900
+//   Micro: jungle-25, jungle-75, jungle-125, jungle-175, jungle-225, jungle-275, jungle-325, jungle-375, jungle-425, jungle-475, jungle-525, jungle-575, jungle-625, jungle-675, jungle-725, jungle-775, jungle-825, jungle-875, jungle-925, jungle-975
+//   Variants: jungle-cold, jungle-cool, jungle-hot, jungle-intense, jungle-muted, jungle-soft, jungle-vivid, jungle-warm
+
+// KHAKI FAMILY (38 colors):
+//   Standard: khaki-50, khaki-100, khaki-200, khaki-300, khaki-400, khaki-500, khaki-600, khaki-700, khaki-800, khaki-900
+//   Micro: khaki-25, khaki-75, khaki-125, khaki-175, khaki-225, khaki-275, khaki-325, khaki-375, khaki-425, khaki-475, khaki-525, khaki-575, khaki-625, khaki-675, khaki-725, khaki-775, khaki-825, khaki-875, khaki-925, khaki-975
+//   Variants: khaki-cold, khaki-cool, khaki-hot, khaki-intense, khaki-muted, khaki-soft, khaki-vivid, khaki-warm
+
+// LAKE FAMILY (38 colors):
+//   Standard: lake-50, lake-100, lake-200, lake-300, lake-400, lake-500, lake-600, lake-700, lake-800, lake-900
+//   Micro: lake-25, lake-75, lake-125, lake-175, lake-225, lake-275, lake-325, lake-375, lake-425, lake-475, lake-525, lake-575, lake-625, lake-675, lake-725, lake-775, lake-825, lake-875, lake-925, lake-975
+//   Variants: lake-cold, lake-cool, lake-hot, lake-intense, lake-muted, lake-soft, lake-vivid, lake-warm
+
+// LAWNGREEN FAMILY (38 colors):
+//   Standard: lawnGreen-50, lawnGreen-100, lawnGreen-200, lawnGreen-300, lawnGreen-400, lawnGreen-500, lawnGreen-600, lawnGreen-700, lawnGreen-800, lawnGreen-900
+//   Micro: lawnGreen-25, lawnGreen-75, lawnGreen-125, lawnGreen-175, lawnGreen-225, lawnGreen-275, lawnGreen-325, lawnGreen-375, lawnGreen-425, lawnGreen-475, lawnGreen-525, lawnGreen-575, lawnGreen-625, lawnGreen-675, lawnGreen-725, lawnGreen-775, lawnGreen-825, lawnGreen-875, lawnGreen-925, lawnGreen-975
+//   Variants: lawnGreen-cold, lawnGreen-cool, lawnGreen-hot, lawnGreen-intense, lawnGreen-muted, lawnGreen-soft, lawnGreen-vivid, lawnGreen-warm
+
+// LEMONCHIFFON FAMILY (38 colors):
+//   Standard: lemonChiffon-50, lemonChiffon-100, lemonChiffon-200, lemonChiffon-300, lemonChiffon-400, lemonChiffon-500, lemonChiffon-600, lemonChiffon-700, lemonChiffon-800, lemonChiffon-900
+//   Micro: lemonChiffon-25, lemonChiffon-75, lemonChiffon-125, lemonChiffon-175, lemonChiffon-225, lemonChiffon-275, lemonChiffon-325, lemonChiffon-375, lemonChiffon-425, lemonChiffon-475, lemonChiffon-525, lemonChiffon-575, lemonChiffon-625, lemonChiffon-675, lemonChiffon-725, lemonChiffon-775, lemonChiffon-825, lemonChiffon-875, lemonChiffon-925, lemonChiffon-975
+//   Variants: lemonChiffon-cold, lemonChiffon-cool, lemonChiffon-hot, lemonChiffon-intense, lemonChiffon-muted, lemonChiffon-soft, lemonChiffon-vivid, lemonChiffon-warm
+
+// LIGHTBLUE FAMILY (38 colors):
+//   Standard: lightBlue-50, lightBlue-100, lightBlue-200, lightBlue-300, lightBlue-400, lightBlue-500, lightBlue-600, lightBlue-700, lightBlue-800, lightBlue-900
+//   Micro: lightBlue-25, lightBlue-75, lightBlue-125, lightBlue-175, lightBlue-225, lightBlue-275, lightBlue-325, lightBlue-375, lightBlue-425, lightBlue-475, lightBlue-525, lightBlue-575, lightBlue-625, lightBlue-675, lightBlue-725, lightBlue-775, lightBlue-825, lightBlue-875, lightBlue-925, lightBlue-975
+//   Variants: lightBlue-cold, lightBlue-cool, lightBlue-hot, lightBlue-intense, lightBlue-muted, lightBlue-soft, lightBlue-vivid, lightBlue-warm
+
+// LIGHTCORAL FAMILY (38 colors):
+//   Standard: lightCoral-50, lightCoral-100, lightCoral-200, lightCoral-300, lightCoral-400, lightCoral-500, lightCoral-600, lightCoral-700, lightCoral-800, lightCoral-900
+//   Micro: lightCoral-25, lightCoral-75, lightCoral-125, lightCoral-175, lightCoral-225, lightCoral-275, lightCoral-325, lightCoral-375, lightCoral-425, lightCoral-475, lightCoral-525, lightCoral-575, lightCoral-625, lightCoral-675, lightCoral-725, lightCoral-775, lightCoral-825, lightCoral-875, lightCoral-925, lightCoral-975
+//   Variants: lightCoral-cold, lightCoral-cool, lightCoral-hot, lightCoral-intense, lightCoral-muted, lightCoral-soft, lightCoral-vivid, lightCoral-warm
+
+// LIGHTGOLDENRODYELLOW FAMILY (38 colors):
+//   Standard: lightGoldenrodYellow-50, lightGoldenrodYellow-100, lightGoldenrodYellow-200, lightGoldenrodYellow-300, lightGoldenrodYellow-400, lightGoldenrodYellow-500, lightGoldenrodYellow-600, lightGoldenrodYellow-700, lightGoldenrodYellow-800, lightGoldenrodYellow-900
+//   Micro: lightGoldenrodYellow-25, lightGoldenrodYellow-75, lightGoldenrodYellow-125, lightGoldenrodYellow-175, lightGoldenrodYellow-225, lightGoldenrodYellow-275, lightGoldenrodYellow-325, lightGoldenrodYellow-375, lightGoldenrodYellow-425, lightGoldenrodYellow-475, lightGoldenrodYellow-525, lightGoldenrodYellow-575, lightGoldenrodYellow-625, lightGoldenrodYellow-675, lightGoldenrodYellow-725, lightGoldenrodYellow-775, lightGoldenrodYellow-825, lightGoldenrodYellow-875, lightGoldenrodYellow-925, lightGoldenrodYellow-975
+//   Variants: lightGoldenrodYellow-cold, lightGoldenrodYellow-cool, lightGoldenrodYellow-hot, lightGoldenrodYellow-intense, lightGoldenrodYellow-muted, lightGoldenrodYellow-soft, lightGoldenrodYellow-vivid, lightGoldenrodYellow-warm
+
+// LIGHTGRAY FAMILY (38 colors):
+//   Standard: lightGray-50, lightGray-100, lightGray-200, lightGray-300, lightGray-400, lightGray-500, lightGray-600, lightGray-700, lightGray-800, lightGray-900
+//   Micro: lightGray-25, lightGray-75, lightGray-125, lightGray-175, lightGray-225, lightGray-275, lightGray-325, lightGray-375, lightGray-425, lightGray-475, lightGray-525, lightGray-575, lightGray-625, lightGray-675, lightGray-725, lightGray-775, lightGray-825, lightGray-875, lightGray-925, lightGray-975
+//   Variants: lightGray-cold, lightGray-cool, lightGray-hot, lightGray-intense, lightGray-muted, lightGray-soft, lightGray-vivid, lightGray-warm
+
+// LIGHTGREEN FAMILY (38 colors):
+//   Standard: lightGreen-50, lightGreen-100, lightGreen-200, lightGreen-300, lightGreen-400, lightGreen-500, lightGreen-600, lightGreen-700, lightGreen-800, lightGreen-900
+//   Micro: lightGreen-25, lightGreen-75, lightGreen-125, lightGreen-175, lightGreen-225, lightGreen-275, lightGreen-325, lightGreen-375, lightGreen-425, lightGreen-475, lightGreen-525, lightGreen-575, lightGreen-625, lightGreen-675, lightGreen-725, lightGreen-775, lightGreen-825, lightGreen-875, lightGreen-925, lightGreen-975
+//   Variants: lightGreen-cold, lightGreen-cool, lightGreen-hot, lightGreen-intense, lightGreen-muted, lightGreen-soft, lightGreen-vivid, lightGreen-warm
+
+// LIGHTPINK FAMILY (38 colors):
+//   Standard: lightPink-50, lightPink-100, lightPink-200, lightPink-300, lightPink-400, lightPink-500, lightPink-600, lightPink-700, lightPink-800, lightPink-900
+//   Micro: lightPink-25, lightPink-75, lightPink-125, lightPink-175, lightPink-225, lightPink-275, lightPink-325, lightPink-375, lightPink-425, lightPink-475, lightPink-525, lightPink-575, lightPink-625, lightPink-675, lightPink-725, lightPink-775, lightPink-825, lightPink-875, lightPink-925, lightPink-975
+//   Variants: lightPink-cold, lightPink-cool, lightPink-hot, lightPink-intense, lightPink-muted, lightPink-soft, lightPink-vivid, lightPink-warm
+
+// LIGHTSALMON FAMILY (38 colors):
+//   Standard: lightSalmon-50, lightSalmon-100, lightSalmon-200, lightSalmon-300, lightSalmon-400, lightSalmon-500, lightSalmon-600, lightSalmon-700, lightSalmon-800, lightSalmon-900
+//   Micro: lightSalmon-25, lightSalmon-75, lightSalmon-125, lightSalmon-175, lightSalmon-225, lightSalmon-275, lightSalmon-325, lightSalmon-375, lightSalmon-425, lightSalmon-475, lightSalmon-525, lightSalmon-575, lightSalmon-625, lightSalmon-675, lightSalmon-725, lightSalmon-775, lightSalmon-825, lightSalmon-875, lightSalmon-925, lightSalmon-975
+//   Variants: lightSalmon-cold, lightSalmon-cool, lightSalmon-hot, lightSalmon-intense, lightSalmon-muted, lightSalmon-soft, lightSalmon-vivid, lightSalmon-warm
+
+// LIGHTSEAGREEN FAMILY (38 colors):
+//   Standard: lightSeaGreen-50, lightSeaGreen-100, lightSeaGreen-200, lightSeaGreen-300, lightSeaGreen-400, lightSeaGreen-500, lightSeaGreen-600, lightSeaGreen-700, lightSeaGreen-800, lightSeaGreen-900
+//   Micro: lightSeaGreen-25, lightSeaGreen-75, lightSeaGreen-125, lightSeaGreen-175, lightSeaGreen-225, lightSeaGreen-275, lightSeaGreen-325, lightSeaGreen-375, lightSeaGreen-425, lightSeaGreen-475, lightSeaGreen-525, lightSeaGreen-575, lightSeaGreen-625, lightSeaGreen-675, lightSeaGreen-725, lightSeaGreen-775, lightSeaGreen-825, lightSeaGreen-875, lightSeaGreen-925, lightSeaGreen-975
+//   Variants: lightSeaGreen-cold, lightSeaGreen-cool, lightSeaGreen-hot, lightSeaGreen-intense, lightSeaGreen-muted, lightSeaGreen-soft, lightSeaGreen-vivid, lightSeaGreen-warm
+
+// LIGHTSKYBLUE FAMILY (38 colors):
+//   Standard: lightSkyBlue-50, lightSkyBlue-100, lightSkyBlue-200, lightSkyBlue-300, lightSkyBlue-400, lightSkyBlue-500, lightSkyBlue-600, lightSkyBlue-700, lightSkyBlue-800, lightSkyBlue-900
+//   Micro: lightSkyBlue-25, lightSkyBlue-75, lightSkyBlue-125, lightSkyBlue-175, lightSkyBlue-225, lightSkyBlue-275, lightSkyBlue-325, lightSkyBlue-375, lightSkyBlue-425, lightSkyBlue-475, lightSkyBlue-525, lightSkyBlue-575, lightSkyBlue-625, lightSkyBlue-675, lightSkyBlue-725, lightSkyBlue-775, lightSkyBlue-825, lightSkyBlue-875, lightSkyBlue-925, lightSkyBlue-975
+//   Variants: lightSkyBlue-cold, lightSkyBlue-cool, lightSkyBlue-hot, lightSkyBlue-intense, lightSkyBlue-muted, lightSkyBlue-soft, lightSkyBlue-vivid, lightSkyBlue-warm
+
+// LIGHTSLATEGRAY FAMILY (38 colors):
+//   Standard: lightSlateGray-50, lightSlateGray-100, lightSlateGray-200, lightSlateGray-300, lightSlateGray-400, lightSlateGray-500, lightSlateGray-600, lightSlateGray-700, lightSlateGray-800, lightSlateGray-900
+//   Micro: lightSlateGray-25, lightSlateGray-75, lightSlateGray-125, lightSlateGray-175, lightSlateGray-225, lightSlateGray-275, lightSlateGray-325, lightSlateGray-375, lightSlateGray-425, lightSlateGray-475, lightSlateGray-525, lightSlateGray-575, lightSlateGray-625, lightSlateGray-675, lightSlateGray-725, lightSlateGray-775, lightSlateGray-825, lightSlateGray-875, lightSlateGray-925, lightSlateGray-975
+//   Variants: lightSlateGray-cold, lightSlateGray-cool, lightSlateGray-hot, lightSlateGray-intense, lightSlateGray-muted, lightSlateGray-soft, lightSlateGray-vivid, lightSlateGray-warm
+
+// LIGHTSTEELBLUE FAMILY (38 colors):
+//   Standard: lightSteelBlue-50, lightSteelBlue-100, lightSteelBlue-200, lightSteelBlue-300, lightSteelBlue-400, lightSteelBlue-500, lightSteelBlue-600, lightSteelBlue-700, lightSteelBlue-800, lightSteelBlue-900
+//   Micro: lightSteelBlue-25, lightSteelBlue-75, lightSteelBlue-125, lightSteelBlue-175, lightSteelBlue-225, lightSteelBlue-275, lightSteelBlue-325, lightSteelBlue-375, lightSteelBlue-425, lightSteelBlue-475, lightSteelBlue-525, lightSteelBlue-575, lightSteelBlue-625, lightSteelBlue-675, lightSteelBlue-725, lightSteelBlue-775, lightSteelBlue-825, lightSteelBlue-875, lightSteelBlue-925, lightSteelBlue-975
+//   Variants: lightSteelBlue-cold, lightSteelBlue-cool, lightSteelBlue-hot, lightSteelBlue-intense, lightSteelBlue-muted, lightSteelBlue-soft, lightSteelBlue-vivid, lightSteelBlue-warm
+
+// LIGHTYELLOW FAMILY (38 colors):
+//   Standard: lightYellow-50, lightYellow-100, lightYellow-200, lightYellow-300, lightYellow-400, lightYellow-500, lightYellow-600, lightYellow-700, lightYellow-800, lightYellow-900
+//   Micro: lightYellow-25, lightYellow-75, lightYellow-125, lightYellow-175, lightYellow-225, lightYellow-275, lightYellow-325, lightYellow-375, lightYellow-425, lightYellow-475, lightYellow-525, lightYellow-575, lightYellow-625, lightYellow-675, lightYellow-725, lightYellow-775, lightYellow-825, lightYellow-875, lightYellow-925, lightYellow-975
+//   Variants: lightYellow-cold, lightYellow-cool, lightYellow-hot, lightYellow-intense, lightYellow-muted, lightYellow-soft, lightYellow-vivid, lightYellow-warm
+
+// LIME FAMILY (38 colors):
+//   Standard: lime-50, lime-100, lime-200, lime-300, lime-400, lime-500, lime-600, lime-700, lime-800, lime-900
+//   Micro: lime-25, lime-75, lime-125, lime-175, lime-225, lime-275, lime-325, lime-375, lime-425, lime-475, lime-525, lime-575, lime-625, lime-675, lime-725, lime-775, lime-825, lime-875, lime-925, lime-975
+//   Variants: lime-cold, lime-cool, lime-hot, lime-intense, lime-muted, lime-soft, lime-vivid, lime-warm
+
+// LINEN FAMILY (38 colors):
+//   Standard: linen-50, linen-100, linen-200, linen-300, linen-400, linen-500, linen-600, linen-700, linen-800, linen-900
+//   Micro: linen-25, linen-75, linen-125, linen-175, linen-225, linen-275, linen-325, linen-375, linen-425, linen-475, linen-525, linen-575, linen-625, linen-675, linen-725, linen-775, linen-825, linen-875, linen-925, linen-975
+//   Variants: linen-cold, linen-cool, linen-hot, linen-intense, linen-muted, linen-soft, linen-vivid, linen-warm
+
+// MAGENTA FAMILY (38 colors):
+//   Standard: magenta-50, magenta-100, magenta-200, magenta-300, magenta-400, magenta-500, magenta-600, magenta-700, magenta-800, magenta-900
+//   Micro: magenta-25, magenta-75, magenta-125, magenta-175, magenta-225, magenta-275, magenta-325, magenta-375, magenta-425, magenta-475, magenta-525, magenta-575, magenta-625, magenta-675, magenta-725, magenta-775, magenta-825, magenta-875, magenta-925, magenta-975
+//   Variants: magenta-cold, magenta-cool, magenta-hot, magenta-intense, magenta-muted, magenta-soft, magenta-vivid, magenta-warm
+
+// MAROON FAMILY (38 colors):
+//   Standard: maroon-50, maroon-100, maroon-200, maroon-300, maroon-400, maroon-500, maroon-600, maroon-700, maroon-800, maroon-900
+//   Micro: maroon-25, maroon-75, maroon-125, maroon-175, maroon-225, maroon-275, maroon-325, maroon-375, maroon-425, maroon-475, maroon-525, maroon-575, maroon-625, maroon-675, maroon-725, maroon-775, maroon-825, maroon-875, maroon-925, maroon-975
+//   Variants: maroon-cold, maroon-cool, maroon-hot, maroon-intense, maroon-muted, maroon-soft, maroon-vivid, maroon-warm
+
+// MEADOW FAMILY (38 colors):
+//   Standard: meadow-50, meadow-100, meadow-200, meadow-300, meadow-400, meadow-500, meadow-600, meadow-700, meadow-800, meadow-900
+//   Micro: meadow-25, meadow-75, meadow-125, meadow-175, meadow-225, meadow-275, meadow-325, meadow-375, meadow-425, meadow-475, meadow-525, meadow-575, meadow-625, meadow-675, meadow-725, meadow-775, meadow-825, meadow-875, meadow-925, meadow-975
+//   Variants: meadow-cold, meadow-cool, meadow-hot, meadow-intense, meadow-muted, meadow-soft, meadow-vivid, meadow-warm
+
+// MEDIUMAQUAMARINE FAMILY (38 colors):
+//   Standard: mediumAquamarine-50, mediumAquamarine-100, mediumAquamarine-200, mediumAquamarine-300, mediumAquamarine-400, mediumAquamarine-500, mediumAquamarine-600, mediumAquamarine-700, mediumAquamarine-800, mediumAquamarine-900
+//   Micro: mediumAquamarine-25, mediumAquamarine-75, mediumAquamarine-125, mediumAquamarine-175, mediumAquamarine-225, mediumAquamarine-275, mediumAquamarine-325, mediumAquamarine-375, mediumAquamarine-425, mediumAquamarine-475, mediumAquamarine-525, mediumAquamarine-575, mediumAquamarine-625, mediumAquamarine-675, mediumAquamarine-725, mediumAquamarine-775, mediumAquamarine-825, mediumAquamarine-875, mediumAquamarine-925, mediumAquamarine-975
+//   Variants: mediumAquamarine-cold, mediumAquamarine-cool, mediumAquamarine-hot, mediumAquamarine-intense, mediumAquamarine-muted, mediumAquamarine-soft, mediumAquamarine-vivid, mediumAquamarine-warm
+
+// MEDIUMBLUE FAMILY (38 colors):
+//   Standard: mediumBlue-50, mediumBlue-100, mediumBlue-200, mediumBlue-300, mediumBlue-400, mediumBlue-500, mediumBlue-600, mediumBlue-700, mediumBlue-800, mediumBlue-900
+//   Micro: mediumBlue-25, mediumBlue-75, mediumBlue-125, mediumBlue-175, mediumBlue-225, mediumBlue-275, mediumBlue-325, mediumBlue-375, mediumBlue-425, mediumBlue-475, mediumBlue-525, mediumBlue-575, mediumBlue-625, mediumBlue-675, mediumBlue-725, mediumBlue-775, mediumBlue-825, mediumBlue-875, mediumBlue-925, mediumBlue-975
+//   Variants: mediumBlue-cold, mediumBlue-cool, mediumBlue-hot, mediumBlue-intense, mediumBlue-muted, mediumBlue-soft, mediumBlue-vivid, mediumBlue-warm
+
+// MEDIUMORCHID FAMILY (38 colors):
+//   Standard: mediumOrchid-50, mediumOrchid-100, mediumOrchid-200, mediumOrchid-300, mediumOrchid-400, mediumOrchid-500, mediumOrchid-600, mediumOrchid-700, mediumOrchid-800, mediumOrchid-900
+//   Micro: mediumOrchid-25, mediumOrchid-75, mediumOrchid-125, mediumOrchid-175, mediumOrchid-225, mediumOrchid-275, mediumOrchid-325, mediumOrchid-375, mediumOrchid-425, mediumOrchid-475, mediumOrchid-525, mediumOrchid-575, mediumOrchid-625, mediumOrchid-675, mediumOrchid-725, mediumOrchid-775, mediumOrchid-825, mediumOrchid-875, mediumOrchid-925, mediumOrchid-975
+//   Variants: mediumOrchid-cold, mediumOrchid-cool, mediumOrchid-hot, mediumOrchid-intense, mediumOrchid-muted, mediumOrchid-soft, mediumOrchid-vivid, mediumOrchid-warm
+
+// MEDIUMPURPLE FAMILY (38 colors):
+//   Standard: mediumPurple-50, mediumPurple-100, mediumPurple-200, mediumPurple-300, mediumPurple-400, mediumPurple-500, mediumPurple-600, mediumPurple-700, mediumPurple-800, mediumPurple-900
+//   Micro: mediumPurple-25, mediumPurple-75, mediumPurple-125, mediumPurple-175, mediumPurple-225, mediumPurple-275, mediumPurple-325, mediumPurple-375, mediumPurple-425, mediumPurple-475, mediumPurple-525, mediumPurple-575, mediumPurple-625, mediumPurple-675, mediumPurple-725, mediumPurple-775, mediumPurple-825, mediumPurple-875, mediumPurple-925, mediumPurple-975
+//   Variants: mediumPurple-cold, mediumPurple-cool, mediumPurple-hot, mediumPurple-intense, mediumPurple-muted, mediumPurple-soft, mediumPurple-vivid, mediumPurple-warm
+
+// MEDIUMSEAGREEN FAMILY (38 colors):
+//   Standard: mediumSeaGreen-50, mediumSeaGreen-100, mediumSeaGreen-200, mediumSeaGreen-300, mediumSeaGreen-400, mediumSeaGreen-500, mediumSeaGreen-600, mediumSeaGreen-700, mediumSeaGreen-800, mediumSeaGreen-900
+//   Micro: mediumSeaGreen-25, mediumSeaGreen-75, mediumSeaGreen-125, mediumSeaGreen-175, mediumSeaGreen-225, mediumSeaGreen-275, mediumSeaGreen-325, mediumSeaGreen-375, mediumSeaGreen-425, mediumSeaGreen-475, mediumSeaGreen-525, mediumSeaGreen-575, mediumSeaGreen-625, mediumSeaGreen-675, mediumSeaGreen-725, mediumSeaGreen-775, mediumSeaGreen-825, mediumSeaGreen-875, mediumSeaGreen-925, mediumSeaGreen-975
+//   Variants: mediumSeaGreen-cold, mediumSeaGreen-cool, mediumSeaGreen-hot, mediumSeaGreen-intense, mediumSeaGreen-muted, mediumSeaGreen-soft, mediumSeaGreen-vivid, mediumSeaGreen-warm
+
+// MEDIUMSLATEBLUE FAMILY (38 colors):
+//   Standard: mediumSlateBlue-50, mediumSlateBlue-100, mediumSlateBlue-200, mediumSlateBlue-300, mediumSlateBlue-400, mediumSlateBlue-500, mediumSlateBlue-600, mediumSlateBlue-700, mediumSlateBlue-800, mediumSlateBlue-900
+//   Micro: mediumSlateBlue-25, mediumSlateBlue-75, mediumSlateBlue-125, mediumSlateBlue-175, mediumSlateBlue-225, mediumSlateBlue-275, mediumSlateBlue-325, mediumSlateBlue-375, mediumSlateBlue-425, mediumSlateBlue-475, mediumSlateBlue-525, mediumSlateBlue-575, mediumSlateBlue-625, mediumSlateBlue-675, mediumSlateBlue-725, mediumSlateBlue-775, mediumSlateBlue-825, mediumSlateBlue-875, mediumSlateBlue-925, mediumSlateBlue-975
+//   Variants: mediumSlateBlue-cold, mediumSlateBlue-cool, mediumSlateBlue-hot, mediumSlateBlue-intense, mediumSlateBlue-muted, mediumSlateBlue-soft, mediumSlateBlue-vivid, mediumSlateBlue-warm
+
+// MEDIUMSPRINGGREEN FAMILY (38 colors):
+//   Standard: mediumSpringGreen-50, mediumSpringGreen-100, mediumSpringGreen-200, mediumSpringGreen-300, mediumSpringGreen-400, mediumSpringGreen-500, mediumSpringGreen-600, mediumSpringGreen-700, mediumSpringGreen-800, mediumSpringGreen-900
+//   Micro: mediumSpringGreen-25, mediumSpringGreen-75, mediumSpringGreen-125, mediumSpringGreen-175, mediumSpringGreen-225, mediumSpringGreen-275, mediumSpringGreen-325, mediumSpringGreen-375, mediumSpringGreen-425, mediumSpringGreen-475, mediumSpringGreen-525, mediumSpringGreen-575, mediumSpringGreen-625, mediumSpringGreen-675, mediumSpringGreen-725, mediumSpringGreen-775, mediumSpringGreen-825, mediumSpringGreen-875, mediumSpringGreen-925, mediumSpringGreen-975
+//   Variants: mediumSpringGreen-cold, mediumSpringGreen-cool, mediumSpringGreen-hot, mediumSpringGreen-intense, mediumSpringGreen-muted, mediumSpringGreen-soft, mediumSpringGreen-vivid, mediumSpringGreen-warm
+
+// MEDIUMTURQUOISE FAMILY (38 colors):
+//   Standard: mediumTurquoise-50, mediumTurquoise-100, mediumTurquoise-200, mediumTurquoise-300, mediumTurquoise-400, mediumTurquoise-500, mediumTurquoise-600, mediumTurquoise-700, mediumTurquoise-800, mediumTurquoise-900
+//   Micro: mediumTurquoise-25, mediumTurquoise-75, mediumTurquoise-125, mediumTurquoise-175, mediumTurquoise-225, mediumTurquoise-275, mediumTurquoise-325, mediumTurquoise-375, mediumTurquoise-425, mediumTurquoise-475, mediumTurquoise-525, mediumTurquoise-575, mediumTurquoise-625, mediumTurquoise-675, mediumTurquoise-725, mediumTurquoise-775, mediumTurquoise-825, mediumTurquoise-875, mediumTurquoise-925, mediumTurquoise-975
+//   Variants: mediumTurquoise-cold, mediumTurquoise-cool, mediumTurquoise-hot, mediumTurquoise-intense, mediumTurquoise-muted, mediumTurquoise-soft, mediumTurquoise-vivid, mediumTurquoise-warm
+
+// MEDIUMVIOLETRED FAMILY (38 colors):
+//   Standard: mediumVioletRed-50, mediumVioletRed-100, mediumVioletRed-200, mediumVioletRed-300, mediumVioletRed-400, mediumVioletRed-500, mediumVioletRed-600, mediumVioletRed-700, mediumVioletRed-800, mediumVioletRed-900
+//   Micro: mediumVioletRed-25, mediumVioletRed-75, mediumVioletRed-125, mediumVioletRed-175, mediumVioletRed-225, mediumVioletRed-275, mediumVioletRed-325, mediumVioletRed-375, mediumVioletRed-425, mediumVioletRed-475, mediumVioletRed-525, mediumVioletRed-575, mediumVioletRed-625, mediumVioletRed-675, mediumVioletRed-725, mediumVioletRed-775, mediumVioletRed-825, mediumVioletRed-875, mediumVioletRed-925, mediumVioletRed-975
+//   Variants: mediumVioletRed-cold, mediumVioletRed-cool, mediumVioletRed-hot, mediumVioletRed-intense, mediumVioletRed-muted, mediumVioletRed-soft, mediumVioletRed-vivid, mediumVioletRed-warm
+
+// MIDNIGHTBLUE FAMILY (38 colors):
+//   Standard: midnightBlue-50, midnightBlue-100, midnightBlue-200, midnightBlue-300, midnightBlue-400, midnightBlue-500, midnightBlue-600, midnightBlue-700, midnightBlue-800, midnightBlue-900
+//   Micro: midnightBlue-25, midnightBlue-75, midnightBlue-125, midnightBlue-175, midnightBlue-225, midnightBlue-275, midnightBlue-325, midnightBlue-375, midnightBlue-425, midnightBlue-475, midnightBlue-525, midnightBlue-575, midnightBlue-625, midnightBlue-675, midnightBlue-725, midnightBlue-775, midnightBlue-825, midnightBlue-875, midnightBlue-925, midnightBlue-975
+//   Variants: midnightBlue-cold, midnightBlue-cool, midnightBlue-hot, midnightBlue-intense, midnightBlue-muted, midnightBlue-soft, midnightBlue-vivid, midnightBlue-warm
+
+// MINTCREAM FAMILY (38 colors):
+//   Standard: mintCream-50, mintCream-100, mintCream-200, mintCream-300, mintCream-400, mintCream-500, mintCream-600, mintCream-700, mintCream-800, mintCream-900
+//   Micro: mintCream-25, mintCream-75, mintCream-125, mintCream-175, mintCream-225, mintCream-275, mintCream-325, mintCream-375, mintCream-425, mintCream-475, mintCream-525, mintCream-575, mintCream-625, mintCream-675, mintCream-725, mintCream-775, mintCream-825, mintCream-875, mintCream-925, mintCream-975
+//   Variants: mintCream-cold, mintCream-cool, mintCream-hot, mintCream-intense, mintCream-muted, mintCream-soft, mintCream-vivid, mintCream-warm
+
+// MIST FAMILY (38 colors):
+//   Standard: mist-50, mist-100, mist-200, mist-300, mist-400, mist-500, mist-600, mist-700, mist-800, mist-900
+//   Micro: mist-25, mist-75, mist-125, mist-175, mist-225, mist-275, mist-325, mist-375, mist-425, mist-475, mist-525, mist-575, mist-625, mist-675, mist-725, mist-775, mist-825, mist-875, mist-925, mist-975
+//   Variants: mist-cold, mist-cool, mist-hot, mist-intense, mist-muted, mist-soft, mist-vivid, mist-warm
+
+// MISTYROSE FAMILY (38 colors):
+//   Standard: mistyRose-50, mistyRose-100, mistyRose-200, mistyRose-300, mistyRose-400, mistyRose-500, mistyRose-600, mistyRose-700, mistyRose-800, mistyRose-900
+//   Micro: mistyRose-25, mistyRose-75, mistyRose-125, mistyRose-175, mistyRose-225, mistyRose-275, mistyRose-325, mistyRose-375, mistyRose-425, mistyRose-475, mistyRose-525, mistyRose-575, mistyRose-625, mistyRose-675, mistyRose-725, mistyRose-775, mistyRose-825, mistyRose-875, mistyRose-925, mistyRose-975
+//   Variants: mistyRose-cold, mistyRose-cool, mistyRose-hot, mistyRose-intense, mistyRose-muted, mistyRose-soft, mistyRose-vivid, mistyRose-warm
+
+// MOCCASIN FAMILY (38 colors):
+//   Standard: moccasin-50, moccasin-100, moccasin-200, moccasin-300, moccasin-400, moccasin-500, moccasin-600, moccasin-700, moccasin-800, moccasin-900
+//   Micro: moccasin-25, moccasin-75, moccasin-125, moccasin-175, moccasin-225, moccasin-275, moccasin-325, moccasin-375, moccasin-425, moccasin-475, moccasin-525, moccasin-575, moccasin-625, moccasin-675, moccasin-725, moccasin-775, moccasin-825, moccasin-875, moccasin-925, moccasin-975
+//   Variants: moccasin-cold, moccasin-cool, moccasin-hot, moccasin-intense, moccasin-muted, moccasin-soft, moccasin-vivid, moccasin-warm
+
+// MOONLIGHT FAMILY (38 colors):
+//   Standard: moonlight-50, moonlight-100, moonlight-200, moonlight-300, moonlight-400, moonlight-500, moonlight-600, moonlight-700, moonlight-800, moonlight-900
+//   Micro: moonlight-25, moonlight-75, moonlight-125, moonlight-175, moonlight-225, moonlight-275, moonlight-325, moonlight-375, moonlight-425, moonlight-475, moonlight-525, moonlight-575, moonlight-625, moonlight-675, moonlight-725, moonlight-775, moonlight-825, moonlight-875, moonlight-925, moonlight-975
+//   Variants: moonlight-cold, moonlight-cool, moonlight-hot, moonlight-intense, moonlight-muted, moonlight-soft, moonlight-vivid, moonlight-warm
+
+// MOSS FAMILY (38 colors):
+//   Standard: moss-50, moss-100, moss-200, moss-300, moss-400, moss-500, moss-600, moss-700, moss-800, moss-900
+//   Micro: moss-25, moss-75, moss-125, moss-175, moss-225, moss-275, moss-325, moss-375, moss-425, moss-475, moss-525, moss-575, moss-625, moss-675, moss-725, moss-775, moss-825, moss-875, moss-925, moss-975
+//   Variants: moss-cold, moss-cool, moss-hot, moss-intense, moss-muted, moss-soft, moss-vivid, moss-warm
+
+// MUD FAMILY (38 colors):
+//   Standard: mud-50, mud-100, mud-200, mud-300, mud-400, mud-500, mud-600, mud-700, mud-800, mud-900
+//   Micro: mud-25, mud-75, mud-125, mud-175, mud-225, mud-275, mud-325, mud-375, mud-425, mud-475, mud-525, mud-575, mud-625, mud-675, mud-725, mud-775, mud-825, mud-875, mud-925, mud-975
+//   Variants: mud-cold, mud-cool, mud-hot, mud-intense, mud-muted, mud-soft, mud-vivid, mud-warm
+
+// NAVAJOWHITE FAMILY (38 colors):
+//   Standard: navajoWhite-50, navajoWhite-100, navajoWhite-200, navajoWhite-300, navajoWhite-400, navajoWhite-500, navajoWhite-600, navajoWhite-700, navajoWhite-800, navajoWhite-900
+//   Micro: navajoWhite-25, navajoWhite-75, navajoWhite-125, navajoWhite-175, navajoWhite-225, navajoWhite-275, navajoWhite-325, navajoWhite-375, navajoWhite-425, navajoWhite-475, navajoWhite-525, navajoWhite-575, navajoWhite-625, navajoWhite-675, navajoWhite-725, navajoWhite-775, navajoWhite-825, navajoWhite-875, navajoWhite-925, navajoWhite-975
+//   Variants: navajoWhite-cold, navajoWhite-cool, navajoWhite-hot, navajoWhite-intense, navajoWhite-muted, navajoWhite-soft, navajoWhite-vivid, navajoWhite-warm
+
+// NAVY FAMILY (38 colors):
+//   Standard: navy-50, navy-100, navy-200, navy-300, navy-400, navy-500, navy-600, navy-700, navy-800, navy-900
+//   Micro: navy-25, navy-75, navy-125, navy-175, navy-225, navy-275, navy-325, navy-375, navy-425, navy-475, navy-525, navy-575, navy-625, navy-675, navy-725, navy-775, navy-825, navy-875, navy-925, navy-975
+//   Variants: navy-cold, navy-cool, navy-hot, navy-intense, navy-muted, navy-soft, navy-vivid, navy-warm
+
+// NEUTRAL FAMILY (38 colors):
+//   Standard: neutral-50, neutral-100, neutral-200, neutral-300, neutral-400, neutral-500, neutral-600, neutral-700, neutral-800, neutral-900
+//   Micro: neutral-25, neutral-75, neutral-125, neutral-175, neutral-225, neutral-275, neutral-325, neutral-375, neutral-425, neutral-475, neutral-525, neutral-575, neutral-625, neutral-675, neutral-725, neutral-775, neutral-825, neutral-875, neutral-925, neutral-975
+//   Variants: neutral-cold, neutral-cool, neutral-hot, neutral-intense, neutral-muted, neutral-soft, neutral-vivid, neutral-warm
+
+// NICKEL FAMILY (38 colors):
+//   Standard: nickel-50, nickel-100, nickel-200, nickel-300, nickel-400, nickel-500, nickel-600, nickel-700, nickel-800, nickel-900
+//   Micro: nickel-25, nickel-75, nickel-125, nickel-175, nickel-225, nickel-275, nickel-325, nickel-375, nickel-425, nickel-475, nickel-525, nickel-575, nickel-625, nickel-675, nickel-725, nickel-775, nickel-825, nickel-875, nickel-925, nickel-975
+//   Variants: nickel-cold, nickel-cool, nickel-hot, nickel-intense, nickel-muted, nickel-soft, nickel-vivid, nickel-warm
+
+// OCEAN FAMILY (38 colors):
+//   Standard: ocean-50, ocean-100, ocean-200, ocean-300, ocean-400, ocean-500, ocean-600, ocean-700, ocean-800, ocean-900
+//   Micro: ocean-25, ocean-75, ocean-125, ocean-175, ocean-225, ocean-275, ocean-325, ocean-375, ocean-425, ocean-475, ocean-525, ocean-575, ocean-625, ocean-675, ocean-725, ocean-775, ocean-825, ocean-875, ocean-925, ocean-975
+//   Variants: ocean-cold, ocean-cool, ocean-hot, ocean-intense, ocean-muted, ocean-soft, ocean-vivid, ocean-warm
+
+// OLDLACE FAMILY (38 colors):
+//   Standard: oldLace-50, oldLace-100, oldLace-200, oldLace-300, oldLace-400, oldLace-500, oldLace-600, oldLace-700, oldLace-800, oldLace-900
+//   Micro: oldLace-25, oldLace-75, oldLace-125, oldLace-175, oldLace-225, oldLace-275, oldLace-325, oldLace-375, oldLace-425, oldLace-475, oldLace-525, oldLace-575, oldLace-625, oldLace-675, oldLace-725, oldLace-775, oldLace-825, oldLace-875, oldLace-925, oldLace-975
+//   Variants: oldLace-cold, oldLace-cool, oldLace-hot, oldLace-intense, oldLace-muted, oldLace-soft, oldLace-vivid, oldLace-warm
+
+// OLIVE FAMILY (38 colors):
+//   Standard: olive-50, olive-100, olive-200, olive-300, olive-400, olive-500, olive-600, olive-700, olive-800, olive-900
+//   Micro: olive-25, olive-75, olive-125, olive-175, olive-225, olive-275, olive-325, olive-375, olive-425, olive-475, olive-525, olive-575, olive-625, olive-675, olive-725, olive-775, olive-825, olive-875, olive-925, olive-975
+//   Variants: olive-cold, olive-cool, olive-hot, olive-intense, olive-muted, olive-soft, olive-vivid, olive-warm
+
+// OLIVEDRAB FAMILY (38 colors):
+//   Standard: oliveDrab-50, oliveDrab-100, oliveDrab-200, oliveDrab-300, oliveDrab-400, oliveDrab-500, oliveDrab-600, oliveDrab-700, oliveDrab-800, oliveDrab-900
+//   Micro: oliveDrab-25, oliveDrab-75, oliveDrab-125, oliveDrab-175, oliveDrab-225, oliveDrab-275, oliveDrab-325, oliveDrab-375, oliveDrab-425, oliveDrab-475, oliveDrab-525, oliveDrab-575, oliveDrab-625, oliveDrab-675, oliveDrab-725, oliveDrab-775, oliveDrab-825, oliveDrab-875, oliveDrab-925, oliveDrab-975
+//   Variants: oliveDrab-cold, oliveDrab-cool, oliveDrab-hot, oliveDrab-intense, oliveDrab-muted, oliveDrab-soft, oliveDrab-vivid, oliveDrab-warm
+
+// ONYX FAMILY (38 colors):
+//   Standard: onyx-50, onyx-100, onyx-200, onyx-300, onyx-400, onyx-500, onyx-600, onyx-700, onyx-800, onyx-900
+//   Micro: onyx-25, onyx-75, onyx-125, onyx-175, onyx-225, onyx-275, onyx-325, onyx-375, onyx-425, onyx-475, onyx-525, onyx-575, onyx-625, onyx-675, onyx-725, onyx-775, onyx-825, onyx-875, onyx-925, onyx-975
+//   Variants: onyx-cold, onyx-cool, onyx-hot, onyx-intense, onyx-muted, onyx-soft, onyx-vivid, onyx-warm
+
+// OPAL FAMILY (38 colors):
+//   Standard: opal-50, opal-100, opal-200, opal-300, opal-400, opal-500, opal-600, opal-700, opal-800, opal-900
+//   Micro: opal-25, opal-75, opal-125, opal-175, opal-225, opal-275, opal-325, opal-375, opal-425, opal-475, opal-525, opal-575, opal-625, opal-675, opal-725, opal-775, opal-825, opal-875, opal-925, opal-975
+//   Variants: opal-cold, opal-cool, opal-hot, opal-intense, opal-muted, opal-soft, opal-vivid, opal-warm
+
+// ORANGE FAMILY (38 colors):
+//   Standard: orange-50, orange-100, orange-200, orange-300, orange-400, orange-500, orange-600, orange-700, orange-800, orange-900
+//   Micro: orange-25, orange-75, orange-125, orange-175, orange-225, orange-275, orange-325, orange-375, orange-425, orange-475, orange-525, orange-575, orange-625, orange-675, orange-725, orange-775, orange-825, orange-875, orange-925, orange-975
+//   Variants: orange-cold, orange-cool, orange-hot, orange-intense, orange-muted, orange-soft, orange-vivid, orange-warm
+
+// ORANGERED FAMILY (38 colors):
+//   Standard: orangeRed-50, orangeRed-100, orangeRed-200, orangeRed-300, orangeRed-400, orangeRed-500, orangeRed-600, orangeRed-700, orangeRed-800, orangeRed-900
+//   Micro: orangeRed-25, orangeRed-75, orangeRed-125, orangeRed-175, orangeRed-225, orangeRed-275, orangeRed-325, orangeRed-375, orangeRed-425, orangeRed-475, orangeRed-525, orangeRed-575, orangeRed-625, orangeRed-675, orangeRed-725, orangeRed-775, orangeRed-825, orangeRed-875, orangeRed-925, orangeRed-975
+//   Variants: orangeRed-cold, orangeRed-cool, orangeRed-hot, orangeRed-intense, orangeRed-muted, orangeRed-soft, orangeRed-vivid, orangeRed-warm
+
+// ORCHID FAMILY (38 colors):
+//   Standard: orchid-50, orchid-100, orchid-200, orchid-300, orchid-400, orchid-500, orchid-600, orchid-700, orchid-800, orchid-900
+//   Micro: orchid-25, orchid-75, orchid-125, orchid-175, orchid-225, orchid-275, orchid-325, orchid-375, orchid-425, orchid-475, orchid-525, orchid-575, orchid-625, orchid-675, orchid-725, orchid-775, orchid-825, orchid-875, orchid-925, orchid-975
+//   Variants: orchid-cold, orchid-cool, orchid-hot, orchid-intense, orchid-muted, orchid-soft, orchid-vivid, orchid-warm
+
+// PALEGREEN FAMILY (38 colors):
+//   Standard: paleGreen-50, paleGreen-100, paleGreen-200, paleGreen-300, paleGreen-400, paleGreen-500, paleGreen-600, paleGreen-700, paleGreen-800, paleGreen-900
+//   Micro: paleGreen-25, paleGreen-75, paleGreen-125, paleGreen-175, paleGreen-225, paleGreen-275, paleGreen-325, paleGreen-375, paleGreen-425, paleGreen-475, paleGreen-525, paleGreen-575, paleGreen-625, paleGreen-675, paleGreen-725, paleGreen-775, paleGreen-825, paleGreen-875, paleGreen-925, paleGreen-975
+//   Variants: paleGreen-cold, paleGreen-cool, paleGreen-hot, paleGreen-intense, paleGreen-muted, paleGreen-soft, paleGreen-vivid, paleGreen-warm
+
+// PALEVIOLETRED FAMILY (38 colors):
+//   Standard: paleVioletRed-50, paleVioletRed-100, paleVioletRed-200, paleVioletRed-300, paleVioletRed-400, paleVioletRed-500, paleVioletRed-600, paleVioletRed-700, paleVioletRed-800, paleVioletRed-900
+//   Micro: paleVioletRed-25, paleVioletRed-75, paleVioletRed-125, paleVioletRed-175, paleVioletRed-225, paleVioletRed-275, paleVioletRed-325, paleVioletRed-375, paleVioletRed-425, paleVioletRed-475, paleVioletRed-525, paleVioletRed-575, paleVioletRed-625, paleVioletRed-675, paleVioletRed-725, paleVioletRed-775, paleVioletRed-825, paleVioletRed-875, paleVioletRed-925, paleVioletRed-975
+//   Variants: paleVioletRed-cold, paleVioletRed-cool, paleVioletRed-hot, paleVioletRed-intense, paleVioletRed-muted, paleVioletRed-soft, paleVioletRed-vivid, paleVioletRed-warm
+
+// PAPAYAWHIP FAMILY (38 colors):
+//   Standard: papayaWhip-50, papayaWhip-100, papayaWhip-200, papayaWhip-300, papayaWhip-400, papayaWhip-500, papayaWhip-600, papayaWhip-700, papayaWhip-800, papayaWhip-900
+//   Micro: papayaWhip-25, papayaWhip-75, papayaWhip-125, papayaWhip-175, papayaWhip-225, papayaWhip-275, papayaWhip-325, papayaWhip-375, papayaWhip-425, papayaWhip-475, papayaWhip-525, papayaWhip-575, papayaWhip-625, papayaWhip-675, papayaWhip-725, papayaWhip-775, papayaWhip-825, papayaWhip-875, papayaWhip-925, papayaWhip-975
+//   Variants: papayaWhip-cold, papayaWhip-cool, papayaWhip-hot, papayaWhip-intense, papayaWhip-muted, papayaWhip-soft, papayaWhip-vivid, papayaWhip-warm
+
+// PEACHPUFF FAMILY (38 colors):
+//   Standard: peachPuff-50, peachPuff-100, peachPuff-200, peachPuff-300, peachPuff-400, peachPuff-500, peachPuff-600, peachPuff-700, peachPuff-800, peachPuff-900
+//   Micro: peachPuff-25, peachPuff-75, peachPuff-125, peachPuff-175, peachPuff-225, peachPuff-275, peachPuff-325, peachPuff-375, peachPuff-425, peachPuff-475, peachPuff-525, peachPuff-575, peachPuff-625, peachPuff-675, peachPuff-725, peachPuff-775, peachPuff-825, peachPuff-875, peachPuff-925, peachPuff-975
+//   Variants: peachPuff-cold, peachPuff-cool, peachPuff-hot, peachPuff-intense, peachPuff-muted, peachPuff-soft, peachPuff-vivid, peachPuff-warm
+
+// PEARL FAMILY (38 colors):
+//   Standard: pearl-50, pearl-100, pearl-200, pearl-300, pearl-400, pearl-500, pearl-600, pearl-700, pearl-800, pearl-900
+//   Micro: pearl-25, pearl-75, pearl-125, pearl-175, pearl-225, pearl-275, pearl-325, pearl-375, pearl-425, pearl-475, pearl-525, pearl-575, pearl-625, pearl-675, pearl-725, pearl-775, pearl-825, pearl-875, pearl-925, pearl-975
+//   Variants: pearl-cold, pearl-cool, pearl-hot, pearl-intense, pearl-muted, pearl-soft, pearl-vivid, pearl-warm
+
+// PERU FAMILY (38 colors):
+//   Standard: peru-50, peru-100, peru-200, peru-300, peru-400, peru-500, peru-600, peru-700, peru-800, peru-900
+//   Micro: peru-25, peru-75, peru-125, peru-175, peru-225, peru-275, peru-325, peru-375, peru-425, peru-475, peru-525, peru-575, peru-625, peru-675, peru-725, peru-775, peru-825, peru-875, peru-925, peru-975
+//   Variants: peru-cold, peru-cool, peru-hot, peru-intense, peru-muted, peru-soft, peru-vivid, peru-warm
+
+// PEWTER FAMILY (38 colors):
+//   Standard: pewter-50, pewter-100, pewter-200, pewter-300, pewter-400, pewter-500, pewter-600, pewter-700, pewter-800, pewter-900
+//   Micro: pewter-25, pewter-75, pewter-125, pewter-175, pewter-225, pewter-275, pewter-325, pewter-375, pewter-425, pewter-475, pewter-525, pewter-575, pewter-625, pewter-675, pewter-725, pewter-775, pewter-825, pewter-875, pewter-925, pewter-975
+//   Variants: pewter-cold, pewter-cool, pewter-hot, pewter-intense, pewter-muted, pewter-soft, pewter-vivid, pewter-warm
+
+// PINE FAMILY (38 colors):
+//   Standard: pine-50, pine-100, pine-200, pine-300, pine-400, pine-500, pine-600, pine-700, pine-800, pine-900
+//   Micro: pine-25, pine-75, pine-125, pine-175, pine-225, pine-275, pine-325, pine-375, pine-425, pine-475, pine-525, pine-575, pine-625, pine-675, pine-725, pine-775, pine-825, pine-875, pine-925, pine-975
+//   Variants: pine-cold, pine-cool, pine-hot, pine-intense, pine-muted, pine-soft, pine-vivid, pine-warm
+
+// PINK FAMILY (38 colors):
+//   Standard: pink-50, pink-100, pink-200, pink-300, pink-400, pink-500, pink-600, pink-700, pink-800, pink-900
+//   Micro: pink-25, pink-75, pink-125, pink-175, pink-225, pink-275, pink-325, pink-375, pink-425, pink-475, pink-525, pink-575, pink-625, pink-675, pink-725, pink-775, pink-825, pink-875, pink-925, pink-975
+//   Variants: pink-cold, pink-cool, pink-hot, pink-intense, pink-muted, pink-soft, pink-vivid, pink-warm
+
+// PLATINUM FAMILY (38 colors):
+//   Standard: platinum-50, platinum-100, platinum-200, platinum-300, platinum-400, platinum-500, platinum-600, platinum-700, platinum-800, platinum-900
+//   Micro: platinum-25, platinum-75, platinum-125, platinum-175, platinum-225, platinum-275, platinum-325, platinum-375, platinum-425, platinum-475, platinum-525, platinum-575, platinum-625, platinum-675, platinum-725, platinum-775, platinum-825, platinum-875, platinum-925, platinum-975
+//   Variants: platinum-cold, platinum-cool, platinum-hot, platinum-intense, platinum-muted, platinum-soft, platinum-vivid, platinum-warm
+
+// PLUM FAMILY (38 colors):
+//   Standard: plum-50, plum-100, plum-200, plum-300, plum-400, plum-500, plum-600, plum-700, plum-800, plum-900
+//   Micro: plum-25, plum-75, plum-125, plum-175, plum-225, plum-275, plum-325, plum-375, plum-425, plum-475, plum-525, plum-575, plum-625, plum-675, plum-725, plum-775, plum-825, plum-875, plum-925, plum-975
+//   Variants: plum-cold, plum-cool, plum-hot, plum-intense, plum-muted, plum-soft, plum-vivid, plum-warm
+
+// POWDERBLUE FAMILY (38 colors):
+//   Standard: powderBlue-50, powderBlue-100, powderBlue-200, powderBlue-300, powderBlue-400, powderBlue-500, powderBlue-600, powderBlue-700, powderBlue-800, powderBlue-900
+//   Micro: powderBlue-25, powderBlue-75, powderBlue-125, powderBlue-175, powderBlue-225, powderBlue-275, powderBlue-325, powderBlue-375, powderBlue-425, powderBlue-475, powderBlue-525, powderBlue-575, powderBlue-625, powderBlue-675, powderBlue-725, powderBlue-775, powderBlue-825, powderBlue-875, powderBlue-925, powderBlue-975
+//   Variants: powderBlue-cold, powderBlue-cool, powderBlue-hot, powderBlue-intense, powderBlue-muted, powderBlue-soft, powderBlue-vivid, powderBlue-warm
+
+// PURPLE FAMILY (38 colors):
+//   Standard: purple-50, purple-100, purple-200, purple-300, purple-400, purple-500, purple-600, purple-700, purple-800, purple-900
+//   Micro: purple-25, purple-75, purple-125, purple-175, purple-225, purple-275, purple-325, purple-375, purple-425, purple-475, purple-525, purple-575, purple-625, purple-675, purple-725, purple-775, purple-825, purple-875, purple-925, purple-975
+//   Variants: purple-cold, purple-cool, purple-hot, purple-intense, purple-muted, purple-soft, purple-vivid, purple-warm
+
+// RED FAMILY (38 colors):
+//   Standard: red-50, red-100, red-200, red-300, red-400, red-500, red-600, red-700, red-800, red-900
+//   Micro: red-25, red-75, red-125, red-175, red-225, red-275, red-325, red-375, red-425, red-475, red-525, red-575, red-625, red-675, red-725, red-775, red-825, red-875, red-925, red-975
+//   Variants: red-cold, red-cool, red-hot, red-intense, red-muted, red-soft, red-vivid, red-warm
+
+// RIVER FAMILY (38 colors):
+//   Standard: river-50, river-100, river-200, river-300, river-400, river-500, river-600, river-700, river-800, river-900
+//   Micro: river-25, river-75, river-125, river-175, river-225, river-275, river-325, river-375, river-425, river-475, river-525, river-575, river-625, river-675, river-725, river-775, river-825, river-875, river-925, river-975
+//   Variants: river-cold, river-cool, river-hot, river-intense, river-muted, river-soft, river-vivid, river-warm
+
+// ROSE FAMILY (38 colors):
+//   Standard: rose-50, rose-100, rose-200, rose-300, rose-400, rose-500, rose-600, rose-700, rose-800, rose-900
+//   Micro: rose-25, rose-75, rose-125, rose-175, rose-225, rose-275, rose-325, rose-375, rose-425, rose-475, rose-525, rose-575, rose-625, rose-675, rose-725, rose-775, rose-825, rose-875, rose-925, rose-975
+//   Variants: rose-cold, rose-cool, rose-hot, rose-intense, rose-muted, rose-soft, rose-vivid, rose-warm
+
+// ROSYBROWN FAMILY (38 colors):
+//   Standard: rosyBrown-50, rosyBrown-100, rosyBrown-200, rosyBrown-300, rosyBrown-400, rosyBrown-500, rosyBrown-600, rosyBrown-700, rosyBrown-800, rosyBrown-900
+//   Micro: rosyBrown-25, rosyBrown-75, rosyBrown-125, rosyBrown-175, rosyBrown-225, rosyBrown-275, rosyBrown-325, rosyBrown-375, rosyBrown-425, rosyBrown-475, rosyBrown-525, rosyBrown-575, rosyBrown-625, rosyBrown-675, rosyBrown-725, rosyBrown-775, rosyBrown-825, rosyBrown-875, rosyBrown-925, rosyBrown-975
+//   Variants: rosyBrown-cold, rosyBrown-cool, rosyBrown-hot, rosyBrown-intense, rosyBrown-muted, rosyBrown-soft, rosyBrown-vivid, rosyBrown-warm
+
+// ROYALBLUE FAMILY (38 colors):
+//   Standard: royalBlue-50, royalBlue-100, royalBlue-200, royalBlue-300, royalBlue-400, royalBlue-500, royalBlue-600, royalBlue-700, royalBlue-800, royalBlue-900
+//   Micro: royalBlue-25, royalBlue-75, royalBlue-125, royalBlue-175, royalBlue-225, royalBlue-275, royalBlue-325, royalBlue-375, royalBlue-425, royalBlue-475, royalBlue-525, royalBlue-575, royalBlue-625, royalBlue-675, royalBlue-725, royalBlue-775, royalBlue-825, royalBlue-875, royalBlue-925, royalBlue-975
+//   Variants: royalBlue-cold, royalBlue-cool, royalBlue-hot, royalBlue-intense, royalBlue-muted, royalBlue-soft, royalBlue-vivid, royalBlue-warm
+
+// RUBY FAMILY (38 colors):
+//   Standard: ruby-50, ruby-100, ruby-200, ruby-300, ruby-400, ruby-500, ruby-600, ruby-700, ruby-800, ruby-900
+//   Micro: ruby-25, ruby-75, ruby-125, ruby-175, ruby-225, ruby-275, ruby-325, ruby-375, ruby-425, ruby-475, ruby-525, ruby-575, ruby-625, ruby-675, ruby-725, ruby-775, ruby-825, ruby-875, ruby-925, ruby-975
+//   Variants: ruby-cold, ruby-cool, ruby-hot, ruby-intense, ruby-muted, ruby-soft, ruby-vivid, ruby-warm
+
+// SADDLE BROWN FAMILY (38 colors):
+//   Standard: saddle Brown-50, saddle Brown-100, saddle Brown-200, saddle Brown-300, saddle Brown-400, saddle Brown-500, saddle Brown-600, saddle Brown-700, saddle Brown-800, saddle Brown-900
+//   Micro: saddle Brown-25, saddle Brown-75, saddle Brown-125, saddle Brown-175, saddle Brown-225, saddle Brown-275, saddle Brown-325, saddle Brown-375, saddle Brown-425, saddle Brown-475, saddle Brown-525, saddle Brown-575, saddle Brown-625, saddle Brown-675, saddle Brown-725, saddle Brown-775, saddle Brown-825, saddle Brown-875, saddle Brown-925, saddle Brown-975
+//   Variants: saddle Brown-cold, saddle Brown-cool, saddle Brown-hot, saddle Brown-intense, saddle Brown-muted, saddle Brown-soft, saddle Brown-vivid, saddle Brown-warm
+
+// SAGE FAMILY (38 colors):
+//   Standard: sage-50, sage-100, sage-200, sage-300, sage-400, sage-500, sage-600, sage-700, sage-800, sage-900
+//   Micro: sage-25, sage-75, sage-125, sage-175, sage-225, sage-275, sage-325, sage-375, sage-425, sage-475, sage-525, sage-575, sage-625, sage-675, sage-725, sage-775, sage-825, sage-875, sage-925, sage-975
+//   Variants: sage-cold, sage-cool, sage-hot, sage-intense, sage-muted, sage-soft, sage-vivid, sage-warm
+
+// SALMON FAMILY (38 colors):
+//   Standard: salmon-50, salmon-100, salmon-200, salmon-300, salmon-400, salmon-500, salmon-600, salmon-700, salmon-800, salmon-900
+//   Micro: salmon-25, salmon-75, salmon-125, salmon-175, salmon-225, salmon-275, salmon-325, salmon-375, salmon-425, salmon-475, salmon-525, salmon-575, salmon-625, salmon-675, salmon-725, salmon-775, salmon-825, salmon-875, salmon-925, salmon-975
+//   Variants: salmon-cold, salmon-cool, salmon-hot, salmon-intense, salmon-muted, salmon-soft, salmon-vivid, salmon-warm
+
+// SAND FAMILY (38 colors):
+//   Standard: sand-50, sand-100, sand-200, sand-300, sand-400, sand-500, sand-600, sand-700, sand-800, sand-900
+//   Micro: sand-25, sand-75, sand-125, sand-175, sand-225, sand-275, sand-325, sand-375, sand-425, sand-475, sand-525, sand-575, sand-625, sand-675, sand-725, sand-775, sand-825, sand-875, sand-925, sand-975
+//   Variants: sand-cold, sand-cool, sand-hot, sand-intense, sand-muted, sand-soft, sand-vivid, sand-warm
+
+// SANDYBROWN FAMILY (38 colors):
+//   Standard: sandyBrown-50, sandyBrown-100, sandyBrown-200, sandyBrown-300, sandyBrown-400, sandyBrown-500, sandyBrown-600, sandyBrown-700, sandyBrown-800, sandyBrown-900
+//   Micro: sandyBrown-25, sandyBrown-75, sandyBrown-125, sandyBrown-175, sandyBrown-225, sandyBrown-275, sandyBrown-325, sandyBrown-375, sandyBrown-425, sandyBrown-475, sandyBrown-525, sandyBrown-575, sandyBrown-625, sandyBrown-675, sandyBrown-725, sandyBrown-775, sandyBrown-825, sandyBrown-875, sandyBrown-925, sandyBrown-975
+//   Variants: sandyBrown-cold, sandyBrown-cool, sandyBrown-hot, sandyBrown-intense, sandyBrown-muted, sandyBrown-soft, sandyBrown-vivid, sandyBrown-warm
+
+// SAPPHIRE FAMILY (38 colors):
+//   Standard: sapphire-50, sapphire-100, sapphire-200, sapphire-300, sapphire-400, sapphire-500, sapphire-600, sapphire-700, sapphire-800, sapphire-900
+//   Micro: sapphire-25, sapphire-75, sapphire-125, sapphire-175, sapphire-225, sapphire-275, sapphire-325, sapphire-375, sapphire-425, sapphire-475, sapphire-525, sapphire-575, sapphire-625, sapphire-675, sapphire-725, sapphire-775, sapphire-825, sapphire-875, sapphire-925, sapphire-975
+//   Variants: sapphire-cold, sapphire-cool, sapphire-hot, sapphire-intense, sapphire-muted, sapphire-soft, sapphire-vivid, sapphire-warm
+
+// SCARLET FAMILY (38 colors):
+//   Standard: scarlet-50, scarlet-100, scarlet-200, scarlet-300, scarlet-400, scarlet-500, scarlet-600, scarlet-700, scarlet-800, scarlet-900
+//   Micro: scarlet-25, scarlet-75, scarlet-125, scarlet-175, scarlet-225, scarlet-275, scarlet-325, scarlet-375, scarlet-425, scarlet-475, scarlet-525, scarlet-575, scarlet-625, scarlet-675, scarlet-725, scarlet-775, scarlet-825, scarlet-875, scarlet-925, scarlet-975
+//   Variants: scarlet-cold, scarlet-cool, scarlet-hot, scarlet-intense, scarlet-muted, scarlet-soft, scarlet-vivid, scarlet-warm
+
+// SEA FAMILY (38 colors):
+//   Standard: sea-50, sea-100, sea-200, sea-300, sea-400, sea-500, sea-600, sea-700, sea-800, sea-900
+//   Micro: sea-25, sea-75, sea-125, sea-175, sea-225, sea-275, sea-325, sea-375, sea-425, sea-475, sea-525, sea-575, sea-625, sea-675, sea-725, sea-775, sea-825, sea-875, sea-925, sea-975
+//   Variants: sea-cold, sea-cool, sea-hot, sea-intense, sea-muted, sea-soft, sea-vivid, sea-warm
+
+// SEAGREEN FAMILY (38 colors):
+//   Standard: seaGreen-50, seaGreen-100, seaGreen-200, seaGreen-300, seaGreen-400, seaGreen-500, seaGreen-600, seaGreen-700, seaGreen-800, seaGreen-900
+//   Micro: seaGreen-25, seaGreen-75, seaGreen-125, seaGreen-175, seaGreen-225, seaGreen-275, seaGreen-325, seaGreen-375, seaGreen-425, seaGreen-475, seaGreen-525, seaGreen-575, seaGreen-625, seaGreen-675, seaGreen-725, seaGreen-775, seaGreen-825, seaGreen-875, seaGreen-925, seaGreen-975
+//   Variants: seaGreen-cold, seaGreen-cool, seaGreen-hot, seaGreen-intense, seaGreen-muted, seaGreen-soft, seaGreen-vivid, seaGreen-warm
+
+// SEASHELL FAMILY (38 colors):
+//   Standard: seashell-50, seashell-100, seashell-200, seashell-300, seashell-400, seashell-500, seashell-600, seashell-700, seashell-800, seashell-900
+//   Micro: seashell-25, seashell-75, seashell-125, seashell-175, seashell-225, seashell-275, seashell-325, seashell-375, seashell-425, seashell-475, seashell-525, seashell-575, seashell-625, seashell-675, seashell-725, seashell-775, seashell-825, seashell-875, seashell-925, seashell-975
+//   Variants: seashell-cold, seashell-cool, seashell-hot, seashell-intense, seashell-muted, seashell-soft, seashell-vivid, seashell-warm
+
+// SIENNA FAMILY (38 colors):
+//   Standard: sienna-50, sienna-100, sienna-200, sienna-300, sienna-400, sienna-500, sienna-600, sienna-700, sienna-800, sienna-900
+//   Micro: sienna-25, sienna-75, sienna-125, sienna-175, sienna-225, sienna-275, sienna-325, sienna-375, sienna-425, sienna-475, sienna-525, sienna-575, sienna-625, sienna-675, sienna-725, sienna-775, sienna-825, sienna-875, sienna-925, sienna-975
+//   Variants: sienna-cold, sienna-cool, sienna-hot, sienna-intense, sienna-muted, sienna-soft, sienna-vivid, sienna-warm
+
+// SILVER FAMILY (38 colors):
+//   Standard: silver-50, silver-100, silver-200, silver-300, silver-400, silver-500, silver-600, silver-700, silver-800, silver-900
+//   Micro: silver-25, silver-75, silver-125, silver-175, silver-225, silver-275, silver-325, silver-375, silver-425, silver-475, silver-525, silver-575, silver-625, silver-675, silver-725, silver-775, silver-825, silver-875, silver-925, silver-975
+//   Variants: silver-cold, silver-cool, silver-hot, silver-intense, silver-muted, silver-soft, silver-vivid, silver-warm
+
+// SKY FAMILY (38 colors):
+//   Standard: sky-50, sky-100, sky-200, sky-300, sky-400, sky-500, sky-600, sky-700, sky-800, sky-900
+//   Micro: sky-25, sky-75, sky-125, sky-175, sky-225, sky-275, sky-325, sky-375, sky-425, sky-475, sky-525, sky-575, sky-625, sky-675, sky-725, sky-775, sky-825, sky-875, sky-925, sky-975
+//   Variants: sky-cold, sky-cool, sky-hot, sky-intense, sky-muted, sky-soft, sky-vivid, sky-warm
+
+// SKYBLUE FAMILY (38 colors):
+//   Standard: skyBlue-50, skyBlue-100, skyBlue-200, skyBlue-300, skyBlue-400, skyBlue-500, skyBlue-600, skyBlue-700, skyBlue-800, skyBlue-900
+//   Micro: skyBlue-25, skyBlue-75, skyBlue-125, skyBlue-175, skyBlue-225, skyBlue-275, skyBlue-325, skyBlue-375, skyBlue-425, skyBlue-475, skyBlue-525, skyBlue-575, skyBlue-625, skyBlue-675, skyBlue-725, skyBlue-775, skyBlue-825, skyBlue-875, skyBlue-925, skyBlue-975
+//   Variants: skyBlue-cold, skyBlue-cool, skyBlue-hot, skyBlue-intense, skyBlue-muted, skyBlue-soft, skyBlue-vivid, skyBlue-warm
+
+// SLATE FAMILY (38 colors):
+//   Standard: slate-50, slate-100, slate-200, slate-300, slate-400, slate-500, slate-600, slate-700, slate-800, slate-900
+//   Micro: slate-25, slate-75, slate-125, slate-175, slate-225, slate-275, slate-325, slate-375, slate-425, slate-475, slate-525, slate-575, slate-625, slate-675, slate-725, slate-775, slate-825, slate-875, slate-925, slate-975
+//   Variants: slate-cold, slate-cool, slate-hot, slate-intense, slate-muted, slate-soft, slate-vivid, slate-warm
+
+// SLATEBLUE FAMILY (38 colors):
+//   Standard: slateBlue-50, slateBlue-100, slateBlue-200, slateBlue-300, slateBlue-400, slateBlue-500, slateBlue-600, slateBlue-700, slateBlue-800, slateBlue-900
+//   Micro: slateBlue-25, slateBlue-75, slateBlue-125, slateBlue-175, slateBlue-225, slateBlue-275, slateBlue-325, slateBlue-375, slateBlue-425, slateBlue-475, slateBlue-525, slateBlue-575, slateBlue-625, slateBlue-675, slateBlue-725, slateBlue-775, slateBlue-825, slateBlue-875, slateBlue-925, slateBlue-975
+//   Variants: slateBlue-cold, slateBlue-cool, slateBlue-hot, slateBlue-intense, slateBlue-muted, slateBlue-soft, slateBlue-vivid, slateBlue-warm
+
+// SLATEGRAY FAMILY (38 colors):
+//   Standard: slateGray-50, slateGray-100, slateGray-200, slateGray-300, slateGray-400, slateGray-500, slateGray-600, slateGray-700, slateGray-800, slateGray-900
+//   Micro: slateGray-25, slateGray-75, slateGray-125, slateGray-175, slateGray-225, slateGray-275, slateGray-325, slateGray-375, slateGray-425, slateGray-475, slateGray-525, slateGray-575, slateGray-625, slateGray-675, slateGray-725, slateGray-775, slateGray-825, slateGray-875, slateGray-925, slateGray-975
+//   Variants: slateGray-cold, slateGray-cool, slateGray-hot, slateGray-intense, slateGray-muted, slateGray-soft, slateGray-vivid, slateGray-warm
+
+// SNOW FAMILY (38 colors):
+//   Standard: snow-50, snow-100, snow-200, snow-300, snow-400, snow-500, snow-600, snow-700, snow-800, snow-900
+//   Micro: snow-25, snow-75, snow-125, snow-175, snow-225, snow-275, snow-325, snow-375, snow-425, snow-475, snow-525, snow-575, snow-625, snow-675, snow-725, snow-775, snow-825, snow-875, snow-925, snow-975
+//   Variants: snow-cold, snow-cool, snow-hot, snow-intense, snow-muted, snow-soft, snow-vivid, snow-warm
+
+// SPRINGGREEN FAMILY (38 colors):
+//   Standard: springGreen-50, springGreen-100, springGreen-200, springGreen-300, springGreen-400, springGreen-500, springGreen-600, springGreen-700, springGreen-800, springGreen-900
+//   Micro: springGreen-25, springGreen-75, springGreen-125, springGreen-175, springGreen-225, springGreen-275, springGreen-325, springGreen-375, springGreen-425, springGreen-475, springGreen-525, springGreen-575, springGreen-625, springGreen-675, springGreen-725, springGreen-775, springGreen-825, springGreen-875, springGreen-925, springGreen-975
+//   Variants: springGreen-cold, springGreen-cool, springGreen-hot, springGreen-intense, springGreen-muted, springGreen-soft, springGreen-vivid, springGreen-warm
+
+// STARLIGHT FAMILY (38 colors):
+//   Standard: starlight-50, starlight-100, starlight-200, starlight-300, starlight-400, starlight-500, starlight-600, starlight-700, starlight-800, starlight-900
+//   Micro: starlight-25, starlight-75, starlight-125, starlight-175, starlight-225, starlight-275, starlight-325, starlight-375, starlight-425, starlight-475, starlight-525, starlight-575, starlight-625, starlight-675, starlight-725, starlight-775, starlight-825, starlight-875, starlight-925, starlight-975
+//   Variants: starlight-cold, starlight-cool, starlight-hot, starlight-intense, starlight-muted, starlight-soft, starlight-vivid, starlight-warm
+
+// STEEL FAMILY (38 colors):
+//   Standard: steel-50, steel-100, steel-200, steel-300, steel-400, steel-500, steel-600, steel-700, steel-800, steel-900
+//   Micro: steel-25, steel-75, steel-125, steel-175, steel-225, steel-275, steel-325, steel-375, steel-425, steel-475, steel-525, steel-575, steel-625, steel-675, steel-725, steel-775, steel-825, steel-875, steel-925, steel-975
+//   Variants: steel-cold, steel-cool, steel-hot, steel-intense, steel-muted, steel-soft, steel-vivid, steel-warm
+
+// STEELBLUE FAMILY (38 colors):
+//   Standard: steelBlue-50, steelBlue-100, steelBlue-200, steelBlue-300, steelBlue-400, steelBlue-500, steelBlue-600, steelBlue-700, steelBlue-800, steelBlue-900
+//   Micro: steelBlue-25, steelBlue-75, steelBlue-125, steelBlue-175, steelBlue-225, steelBlue-275, steelBlue-325, steelBlue-375, steelBlue-425, steelBlue-475, steelBlue-525, steelBlue-575, steelBlue-625, steelBlue-675, steelBlue-725, steelBlue-775, steelBlue-825, steelBlue-875, steelBlue-925, steelBlue-975
+//   Variants: steelBlue-cold, steelBlue-cool, steelBlue-hot, steelBlue-intense, steelBlue-muted, steelBlue-soft, steelBlue-vivid, steelBlue-warm
+
+// STONE FAMILY (38 colors):
+//   Standard: stone-50, stone-100, stone-200, stone-300, stone-400, stone-500, stone-600, stone-700, stone-800, stone-900
+//   Micro: stone-25, stone-75, stone-125, stone-175, stone-225, stone-275, stone-325, stone-375, stone-425, stone-475, stone-525, stone-575, stone-625, stone-675, stone-725, stone-775, stone-825, stone-875, stone-925, stone-975
+//   Variants: stone-cold, stone-cool, stone-hot, stone-intense, stone-muted, stone-soft, stone-vivid, stone-warm
+
+// STORM FAMILY (38 colors):
+//   Standard: storm-50, storm-100, storm-200, storm-300, storm-400, storm-500, storm-600, storm-700, storm-800, storm-900
+//   Micro: storm-25, storm-75, storm-125, storm-175, storm-225, storm-275, storm-325, storm-375, storm-425, storm-475, storm-525, storm-575, storm-625, storm-675, storm-725, storm-775, storm-825, storm-875, storm-925, storm-975
+//   Variants: storm-cold, storm-cool, storm-hot, storm-intense, storm-muted, storm-soft, storm-vivid, storm-warm
+
+// SUNRISE FAMILY (38 colors):
+//   Standard: sunrise-50, sunrise-100, sunrise-200, sunrise-300, sunrise-400, sunrise-500, sunrise-600, sunrise-700, sunrise-800, sunrise-900
+//   Micro: sunrise-25, sunrise-75, sunrise-125, sunrise-175, sunrise-225, sunrise-275, sunrise-325, sunrise-375, sunrise-425, sunrise-475, sunrise-525, sunrise-575, sunrise-625, sunrise-675, sunrise-725, sunrise-775, sunrise-825, sunrise-875, sunrise-925, sunrise-975
+//   Variants: sunrise-cold, sunrise-cool, sunrise-hot, sunrise-intense, sunrise-muted, sunrise-soft, sunrise-vivid, sunrise-warm
+
+// SUNSET FAMILY (38 colors):
+//   Standard: sunset-50, sunset-100, sunset-200, sunset-300, sunset-400, sunset-500, sunset-600, sunset-700, sunset-800, sunset-900
+//   Micro: sunset-25, sunset-75, sunset-125, sunset-175, sunset-225, sunset-275, sunset-325, sunset-375, sunset-425, sunset-475, sunset-525, sunset-575, sunset-625, sunset-675, sunset-725, sunset-775, sunset-825, sunset-875, sunset-925, sunset-975
+//   Variants: sunset-cold, sunset-cool, sunset-hot, sunset-intense, sunset-muted, sunset-soft, sunset-vivid, sunset-warm
+
+// TAN FAMILY (38 colors):
+//   Standard: tan-50, tan-100, tan-200, tan-300, tan-400, tan-500, tan-600, tan-700, tan-800, tan-900
+//   Micro: tan-25, tan-75, tan-125, tan-175, tan-225, tan-275, tan-325, tan-375, tan-425, tan-475, tan-525, tan-575, tan-625, tan-675, tan-725, tan-775, tan-825, tan-875, tan-925, tan-975
+//   Variants: tan-cold, tan-cool, tan-hot, tan-intense, tan-muted, tan-soft, tan-vivid, tan-warm
+
+// TEAL FAMILY (38 colors):
+//   Standard: teal-50, teal-100, teal-200, teal-300, teal-400, teal-500, teal-600, teal-700, teal-800, teal-900
+//   Micro: teal-25, teal-75, teal-125, teal-175, teal-225, teal-275, teal-325, teal-375, teal-425, teal-475, teal-525, teal-575, teal-625, teal-675, teal-725, teal-775, teal-825, teal-875, teal-925, teal-975
+//   Variants: teal-cold, teal-cool, teal-hot, teal-intense, teal-muted, teal-soft, teal-vivid, teal-warm
+
+// THISTLE FAMILY (38 colors):
+//   Standard: thistle-50, thistle-100, thistle-200, thistle-300, thistle-400, thistle-500, thistle-600, thistle-700, thistle-800, thistle-900
+//   Micro: thistle-25, thistle-75, thistle-125, thistle-175, thistle-225, thistle-275, thistle-325, thistle-375, thistle-425, thistle-475, thistle-525, thistle-575, thistle-625, thistle-675, thistle-725, thistle-775, thistle-825, thistle-875, thistle-925, thistle-975
+//   Variants: thistle-cold, thistle-cool, thistle-hot, thistle-intense, thistle-muted, thistle-soft, thistle-vivid, thistle-warm
+
+// TIN FAMILY (38 colors):
+//   Standard: tin-50, tin-100, tin-200, tin-300, tin-400, tin-500, tin-600, tin-700, tin-800, tin-900
+//   Micro: tin-25, tin-75, tin-125, tin-175, tin-225, tin-275, tin-325, tin-375, tin-425, tin-475, tin-525, tin-575, tin-625, tin-675, tin-725, tin-775, tin-825, tin-875, tin-925, tin-975
+//   Variants: tin-cold, tin-cool, tin-hot, tin-intense, tin-muted, tin-soft, tin-vivid, tin-warm
+
+// TITANIUM FAMILY (38 colors):
+//   Standard: titanium-50, titanium-100, titanium-200, titanium-300, titanium-400, titanium-500, titanium-600, titanium-700, titanium-800, titanium-900
+//   Micro: titanium-25, titanium-75, titanium-125, titanium-175, titanium-225, titanium-275, titanium-325, titanium-375, titanium-425, titanium-475, titanium-525, titanium-575, titanium-625, titanium-675, titanium-725, titanium-775, titanium-825, titanium-875, titanium-925, titanium-975
+//   Variants: titanium-cold, titanium-cool, titanium-hot, titanium-intense, titanium-muted, titanium-soft, titanium-vivid, titanium-warm
+
+// TOMATO FAMILY (38 colors):
+//   Standard: tomato-50, tomato-100, tomato-200, tomato-300, tomato-400, tomato-500, tomato-600, tomato-700, tomato-800, tomato-900
+//   Micro: tomato-25, tomato-75, tomato-125, tomato-175, tomato-225, tomato-275, tomato-325, tomato-375, tomato-425, tomato-475, tomato-525, tomato-575, tomato-625, tomato-675, tomato-725, tomato-775, tomato-825, tomato-875, tomato-925, tomato-975
+//   Variants: tomato-cold, tomato-cool, tomato-hot, tomato-intense, tomato-muted, tomato-soft, tomato-vivid, tomato-warm
+
+// TOPAZ FAMILY (38 colors):
+//   Standard: topaz-50, topaz-100, topaz-200, topaz-300, topaz-400, topaz-500, topaz-600, topaz-700, topaz-800, topaz-900
+//   Micro: topaz-25, topaz-75, topaz-125, topaz-175, topaz-225, topaz-275, topaz-325, topaz-375, topaz-425, topaz-475, topaz-525, topaz-575, topaz-625, topaz-675, topaz-725, topaz-775, topaz-825, topaz-875, topaz-925, topaz-975
+//   Variants: topaz-cold, topaz-cool, topaz-hot, topaz-intense, topaz-muted, topaz-soft, topaz-vivid, topaz-warm
+
+// TURQUOISE FAMILY (38 colors):
+//   Standard: turquoise-50, turquoise-100, turquoise-200, turquoise-300, turquoise-400, turquoise-500, turquoise-600, turquoise-700, turquoise-800, turquoise-900
+//   Micro: turquoise-25, turquoise-75, turquoise-125, turquoise-175, turquoise-225, turquoise-275, turquoise-325, turquoise-375, turquoise-425, turquoise-475, turquoise-525, turquoise-575, turquoise-625, turquoise-675, turquoise-725, turquoise-775, turquoise-825, turquoise-875, turquoise-925, turquoise-975
+//   Variants: turquoise-cold, turquoise-cool, turquoise-hot, turquoise-intense, turquoise-muted, turquoise-soft, turquoise-vivid, turquoise-warm
+
+// TWILIGHT FAMILY (38 colors):
+//   Standard: twilight-50, twilight-100, twilight-200, twilight-300, twilight-400, twilight-500, twilight-600, twilight-700, twilight-800, twilight-900
+//   Micro: twilight-25, twilight-75, twilight-125, twilight-175, twilight-225, twilight-275, twilight-325, twilight-375, twilight-425, twilight-475, twilight-525, twilight-575, twilight-625, twilight-675, twilight-725, twilight-775, twilight-825, twilight-875, twilight-925, twilight-975
+//   Variants: twilight-cold, twilight-cool, twilight-hot, twilight-intense, twilight-muted, twilight-soft, twilight-vivid, twilight-warm
+
+// VIOLET FAMILY (38 colors):
+//   Standard: violet-50, violet-100, violet-200, violet-300, violet-400, violet-500, violet-600, violet-700, violet-800, violet-900
+//   Micro: violet-25, violet-75, violet-125, violet-175, violet-225, violet-275, violet-325, violet-375, violet-425, violet-475, violet-525, violet-575, violet-625, violet-675, violet-725, violet-775, violet-825, violet-875, violet-925, violet-975
+//   Variants: violet-cold, violet-cool, violet-hot, violet-intense, violet-muted, violet-soft, violet-vivid, violet-warm
+
+// WHEAT FAMILY (38 colors):
+//   Standard: wheat-50, wheat-100, wheat-200, wheat-300, wheat-400, wheat-500, wheat-600, wheat-700, wheat-800, wheat-900
+//   Micro: wheat-25, wheat-75, wheat-125, wheat-175, wheat-225, wheat-275, wheat-325, wheat-375, wheat-425, wheat-475, wheat-525, wheat-575, wheat-625, wheat-675, wheat-725, wheat-775, wheat-825, wheat-875, wheat-925, wheat-975
+//   Variants: wheat-cold, wheat-cool, wheat-hot, wheat-intense, wheat-muted, wheat-soft, wheat-vivid, wheat-warm
+
+// WHITE FAMILY (38 colors):
+//   Standard: white-50, white-100, white-200, white-300, white-400, white-500, white-600, white-700, white-800, white-900
+//   Micro: white-25, white-75, white-125, white-175, white-225, white-275, white-325, white-375, white-425, white-475, white-525, white-575, white-625, white-675, white-725, white-775, white-825, white-875, white-925, white-975
+//   Variants: white-cold, white-cool, white-hot, white-intense, white-muted, white-soft, white-vivid, white-warm
+
+// WHITESMOKE FAMILY (38 colors):
+//   Standard: whiteSmoke-50, whiteSmoke-100, whiteSmoke-200, whiteSmoke-300, whiteSmoke-400, whiteSmoke-500, whiteSmoke-600, whiteSmoke-700, whiteSmoke-800, whiteSmoke-900
+//   Micro: whiteSmoke-25, whiteSmoke-75, whiteSmoke-125, whiteSmoke-175, whiteSmoke-225, whiteSmoke-275, whiteSmoke-325, whiteSmoke-375, whiteSmoke-425, whiteSmoke-475, whiteSmoke-525, whiteSmoke-575, whiteSmoke-625, whiteSmoke-675, whiteSmoke-725, whiteSmoke-775, whiteSmoke-825, whiteSmoke-875, whiteSmoke-925, whiteSmoke-975
+//   Variants: whiteSmoke-cold, whiteSmoke-cool, whiteSmoke-hot, whiteSmoke-intense, whiteSmoke-muted, whiteSmoke-soft, whiteSmoke-vivid, whiteSmoke-warm
+
+// YELLOW FAMILY (38 colors):
+//   Standard: yellow-50, yellow-100, yellow-200, yellow-300, yellow-400, yellow-500, yellow-600, yellow-700, yellow-800, yellow-900
+//   Micro: yellow-25, yellow-75, yellow-125, yellow-175, yellow-225, yellow-275, yellow-325, yellow-375, yellow-425, yellow-475, yellow-525, yellow-575, yellow-625, yellow-675, yellow-725, yellow-775, yellow-825, yellow-875, yellow-925, yellow-975
+//   Variants: yellow-cold, yellow-cool, yellow-hot, yellow-intense, yellow-muted, yellow-soft, yellow-vivid, yellow-warm
+
+// YELLOWGREEN FAMILY (38 colors):
+//   Standard: yellowGreen-50, yellowGreen-100, yellowGreen-200, yellowGreen-300, yellowGreen-400, yellowGreen-500, yellowGreen-600, yellowGreen-700, yellowGreen-800, yellowGreen-900
+//   Micro: yellowGreen-25, yellowGreen-75, yellowGreen-125, yellowGreen-175, yellowGreen-225, yellowGreen-275, yellowGreen-325, yellowGreen-375, yellowGreen-425, yellowGreen-475, yellowGreen-525, yellowGreen-575, yellowGreen-625, yellowGreen-675, yellowGreen-725, yellowGreen-775, yellowGreen-825, yellowGreen-875, yellowGreen-925, yellowGreen-975
+//   Variants: yellowGreen-cold, yellowGreen-cool, yellowGreen-hot, yellowGreen-intense, yellowGreen-muted, yellowGreen-soft, yellowGreen-vivid, yellowGreen-warm
+
+// ZINC FAMILY (38 colors):
+//   Standard: zinc-50, zinc-100, zinc-200, zinc-300, zinc-400, zinc-500, zinc-600, zinc-700, zinc-800, zinc-900
+//   Micro: zinc-25, zinc-75, zinc-125, zinc-175, zinc-225, zinc-275, zinc-325, zinc-375, zinc-425, zinc-475, zinc-525, zinc-575, zinc-625, zinc-675, zinc-725, zinc-775, zinc-825, zinc-875, zinc-925, zinc-975
+//   Variants: zinc-cold, zinc-cool, zinc-hot, zinc-intense, zinc-muted, zinc-soft, zinc-vivid, zinc-warm

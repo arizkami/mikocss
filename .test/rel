@@ -1,0 +1,209 @@
+name: MikoCSS CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Auto-release every Monday at 9:00 AM UTC (optional)
+    - cron: '0 9 * * 1'
+
+jobs:
+  test:
+    name: Test CLI + Core
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.11']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Python deps
+        run: |
+          pip install -U pip pytest black flake8 isort
+
+      - name: Test CLI
+        shell: bash
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: 1
+        run: |
+          python main.py --help
+          python main.py init -p gtk --output test_out
+          ls -la test_out
+
+  build:
+    name: Build CLI Executable
+    needs: test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build CLI with PyInstaller (.spec)
+        shell: bash
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: 1
+        run: |
+          pyinstaller main.spec --clean --noconfirm
+
+      - name: Upload CLI Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikocss-${{ matrix.os }}
+          path: dist/*
+
+  release:
+    name: Create Release
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for changelog
+
+      - name: Generate release version
+        id: version
+        run: |
+          VERSION=$(date +'%Y.%m.%d')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if tag exists
+        id: tag_check
+        run: |
+          if git rev-parse "refs/tags/v${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Download all artifacts
+        if: steps.tag_check.outputs.exists == 'false'
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Prepare release assets
+        if: steps.tag_check.outputs.exists == 'false'
+        run: |
+          mkdir -p release-assets
+          
+          # Package each OS build
+          for os in ubuntu-latest windows-latest macos-latest; do
+            if [ -d "artifacts/mikocss-$os" ]; then
+              cd "artifacts/mikocss-$os"
+              if [ "$os" = "windows-latest" ]; then
+                zip -r "../../release-assets/mikocss-windows-${{ steps.version.outputs.version }}.zip" .
+              elif [ "$os" = "macos-latest" ]; then
+                tar -czf "../../release-assets/mikocss-macos-${{ steps.version.outputs.version }}.tar.gz" .
+              else
+                tar -czf "../../release-assets/mikocss-linux-${{ steps.version.outputs.version }}.tar.gz" .
+              fi
+              cd ../..
+            fi
+          done
+
+      - name: Generate release notes
+        if: steps.tag_check.outputs.exists == 'false'
+        id: release_notes
+        run: |
+          # Get the last release tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            # First release
+            COMMITS=$(git log --pretty=format:"- %s (%h)" --no-merges)
+          else
+            # Get commits since last release
+            COMMITS=$(git log $LAST_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges)
+          fi
+          
+          # Create release notes
+          cat > release_notes.md << EOF
+          ## MikoCSS Release ${{ steps.version.outputs.version }}
+          
+          ### 🚀 What's New
+          
+          This release includes the latest improvements and bug fixes for MikoCSS.
+          
+          ### 📦 Downloads
+          
+          - **Windows**: mikocss-windows-${{ steps.version.outputs.version }}.zip
+          - **macOS**: mikocss-macos-${{ steps.version.outputs.version }}.tar.gz
+          - **Linux**: mikocss-linux-${{ steps.version.outputs.version }}.tar.gz
+          
+          ### 🔧 Installation
+          
+          1. Download the appropriate package for your operating system
+          2. Extract the archive
+          3. Run the executable or follow the build instructions
+          
+          ### 📝 Changes
+          
+          $COMMITS
+          
+          ### 🎯 Supported Frameworks
+          
+          - GTK/GDK (Linux)
+          - Qt5/Qt6 (Cross-platform)
+          - Win32 (Windows)
+          
+          ### 🐛 Bug Reports
+          
+          If you encounter any issues, please report them on our [GitHub Issues](https://github.com/${{ github.repository }}/issues) page.
+          EOF
+          
+          # Set output for GitHub release
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          cat release_notes.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        if: steps.tag_check.outputs.exists == 'false'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          release_name: MikoCSS ${{ steps.version.outputs.version }}
+          body: ${{ steps.release_notes.outputs.notes }}
+          draft: false
+          prerelease: false
+        id: create_release
+
+      - name: Upload Release Assets
+        if: steps.tag_check.outputs.exists == 'false'
+        run: |
+          for asset in release-assets/*; do
+            if [ -f "$asset" ]; then
+              echo "Uploading $asset"
+              gh release upload ${{ steps.version.outputs.tag }} "$asset"
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
