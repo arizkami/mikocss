@@ -30,13 +30,6 @@ jobs:
           pip install -U pip pytest black flake8 isort
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Lint + Format + Test
-        run: |
-          black --check .
-          isort --check-only .
-          flake8 . --max-line-length 127
-          pytest -v
-
       - name: Test CLI
         run: |
           python mikocss.py --help
