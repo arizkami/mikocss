@@ -32,8 +32,8 @@ jobs:
 
       - name: Test CLI
         run: |
-          python mikocss.py --help
-          python mikocss.py init -p gtk --output test_out
+          python main.py --help
+          python main.py init -p gtk --output test_out
           ls -la test_out
 
   build:
