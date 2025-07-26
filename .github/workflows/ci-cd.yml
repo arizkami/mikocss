@@ -30,6 +30,9 @@ jobs:
           pip install -U pip pytest black flake8 isort
 
       - name: Test CLI
+        shell: bash
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           python main.py --help
           python main.py init -p gtk --output test_out
@@ -55,6 +58,9 @@ jobs:
         run: pip install pyinstaller
 
       - name: Build CLI with PyInstaller (.spec)
+        shell: bash
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           pyinstaller main.spec --clean --noconfirm
 

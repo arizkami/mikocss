@@ -1,47 +1,61 @@
 import argparse
-import os
 import sys
-
+import os
 from core.processor import ColorProcessor
 
+# Add Windows encoding fix
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+    sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
 
 def show_usage():
     """Display usage information and examples"""
-    print("🎨 MikoCSS Generator")
+    # Use ASCII alternatives for Windows compatibility
+    rocket = "🚀" if sys.platform != "win32" else "*"
+    target = "🎯" if sys.platform != "win32" else "->"
+    folder = "📁" if sys.platform != "win32" else "[]"
+    file_icon = "📄" if sys.platform != "win32" else "-"
+    
+    print(f"{rocket} MikoCSS Generator")
     print("=" * 50)
     print("Generate C++ libraries for colors, typography, and layout\n")
-
-    print("📋 Commands:")
+    
+    print(f"{file_icon} Commands:")
     print("  init -p <framework>     Initialize C++ project with all styling files")
     print("  generate                Generate styling files (legacy mode)\n")
-
-    print("🎯 Frameworks:")
+    
+    print(f"{target} Frameworks:")
     print("  gtk    - Generate GTK/GDK compatible code")
     print("  qt5    - Generate Qt5 compatible code")
     print("  qt6    - Generate Qt6 compatible code")
     print("  win32  - Generate Win32/COLORREF compatible code\n")
-
-    print("💡 Examples:")
+    
+    print("Examples:")
     print("  python main.py init -p gtk")
     print("  python main.py init -p qt5 --output ./include")
     print("  python main.py init -p qt6 --output ./include")
     print("  python main.py --cppframework qt5 --output ./build\n")
-
-    print("📦 Generated files:")
+    
+    print("Generated files:")
     print("  • miko_color.hpp, miko_wrapper.hpp, miko_color_list.txt")
     print("  • miko_typography.hpp, miko_typography_wrapper.hpp")
     print("  • miko_layout.hpp, miko_layout_wrapper.hpp\n")
-
-    print("🔧 For detailed help: python main.py --help")
-
+    
+    print("For detailed help: python main.py --help")
 
 def init_project(framework, output_dir):
     """Initialize a C++ project with all MikoCSS styling files"""
-    print("🚀 Initializing MikoCSS C++ Project")
+    # Use ASCII alternatives for Windows compatibility
+    rocket = "🚀" if sys.platform != "win32" else "*"
+    target = "🎯" if sys.platform != "win32" else "->"
+    folder = "📁" if sys.platform != "win32" else "[]"
+    
+    print(f"{rocket} Initializing MikoCSS C++ Project")
     print("=" * 50)
-    print(f"🎯 Target Framework: {framework.upper()}")
-    print(f"📁 Output Directory: {os.path.abspath(output_dir)}")
-
+    print(f"{target} Target Framework: {framework.upper()}")
+    print(f"{folder} Output Directory: {os.path.abspath(output_dir)}")
+    
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
 
