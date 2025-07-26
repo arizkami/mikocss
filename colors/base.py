@@ -417,7 +417,7 @@ base_colors = {
     "lemonChiffon": "#fffacd",
     "lightGoldenrodYellow": "#fafad2",
     "lightYellow": "#ffffe0",
-    "saddle Brown": "#8b4513",
+    "saddleBrown": "#8b4513",
     "sienna": "#a0522d",
     "chocolate": "#d2691e",
     "peru": "#cd853f",

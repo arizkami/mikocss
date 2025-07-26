@@ -19,14 +19,14 @@ background_color = {
 # Background image utilities
 background_image = {
     "none": "none",
-    "gradient_to_t": "linear-gradient(to top, var(--tw-gradient-stops))",
-    "gradient_to_tr": "linear-gradient(to top right, var(--tw-gradient-stops))",
-    "gradient_to_r": "linear-gradient(to right, var(--tw-gradient-stops))",
-    "gradient_to_br": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
-    "gradient_to_b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-    "gradient_to_bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
-    "gradient_to_l": "linear-gradient(to left, var(--tw-gradient-stops))",
-    "gradient_to_tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
+    "gradient_to_t": "linear-gradient(to top, var(--miko-gradient-stops))",
+    "gradient_to_tr": "linear-gradient(to top right, var(--miko-gradient-stops))",
+    "gradient_to_r": "linear-gradient(to right, var(--miko-gradient-stops))",
+    "gradient_to_br": "linear-gradient(to bottom right, var(--miko-gradient-stops))",
+    "gradient_to_b": "linear-gradient(to bottom, var(--miko-gradient-stops))",
+    "gradient_to_bl": "linear-gradient(to bottom left, var(--miko-gradient-stops))",
+    "gradient_to_l": "linear-gradient(to left, var(--miko-gradient-stops))",
+    "gradient_to_tl": "linear-gradient(to top left, var(--miko-gradient-stops))",
 }
 
 # Background origin utilities

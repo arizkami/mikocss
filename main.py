@@ -2,6 +2,7 @@ import argparse
 import sys
 import os
 from core.processor import ColorProcessor
+from core.web_processor import WebProcessor
 
 # Add Windows encoding fix
 if sys.platform == "win32":
@@ -284,6 +285,27 @@ def main():
         help="Output directory for project files (default: current directory)",
     )
 
+    # Add web command
+    web_parser = subparsers.add_parser(
+        "web", help="Generate web files (CSS, JS, TS)"
+    )
+    web_parser.add_argument(
+        "-f", "--format",
+        choices=["css", "js", "javascript", "ts", "typescript", "json", "all"],
+        default="css",
+        help="Output format (default: css)"
+    )
+    web_parser.add_argument(
+        "--output",
+        default=".",
+        help="Output directory (default: current directory)"
+    )
+    web_parser.add_argument(
+        "--package",
+        action="store_true",
+        help="Generate complete npm package"
+    )
+
     # Legacy generate mode (backward compatibility)
     parser.add_argument(
         "--cppframework",
@@ -301,6 +323,11 @@ def main():
     # Handle init command
     if args.command == "init":
         init_project(args.project, args.output)
+        return
+
+    # Handle web command
+    if args.command == "web":
+        init_web_project(args.format, args.output, args.package)
         return
 
     # Handle legacy mode
@@ -384,6 +411,64 @@ def main():
 
     # If no valid command or framework specified, show usage
     show_usage()
+
+
+def init_web_project(format_type, output_dir, create_package=False):
+    """Initialize web project with styling files"""
+    rocket = "🚀" if sys.platform != "win32" else "*"
+    target = "🎯" if sys.platform != "win32" else "->"
+    folder = "📁" if sys.platform != "win32" else "[]"
+    
+    print(f"{rocket} Initializing MikoCSS Web Project")
+    print("=" * 50)
+    print(f"{target} Target Format: {format_type.upper()}")
+    print(f"{folder} Output Directory: {os.path.abspath(output_dir)}")
+    
+    # Create output directory
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Initialize web processor
+    processor = WebProcessor(framework="css")
+    
+    # Process colors
+    print("\n🎨 Processing colors...")
+    processor.process_colors()
+    
+    if create_package:
+        print("📦 Generating npm package...")
+        files = processor.generate_npm_package(output_dir)
+    else:
+        print(f"📝 Generating {format_type} files...")
+        files = processor.generate_web_files(output_dir, format_type)
+    
+    # Display results
+    stats = processor.get_color_stats()
+    
+    print(f"\n✅ Project initialized successfully!")
+    print(f"\n📄 Generated files:")
+    for file_type, path in files.items():
+        print(f"   • {file_type}: {path}")
+    
+    print(f"\n🎯 Project statistics:")
+    print(f"   • {stats['total_families']} base color families")
+    print(f"   • Total: {stats['total_colors']} unique colors")
+    
+    print(f"\n💡 Usage examples:")
+    if format_type in ["css", "all"]:
+        print(f"\n🎨 CSS:")
+        print(f"   .text-blue-500 {{ color: var(--color-blue-500-rgb); }}")
+        print(f"   .bg-gray-100 {{ background: var(--color-gray-100-rgb); }}")
+    
+    if format_type in ["js", "javascript", "all"]:
+        print(f"\n📜 JavaScript:")
+        print(f"   import {{ getColor }} from './mikocss.js';")
+        print(f"   const blue = getColor('blue-500');")
+    
+    if format_type in ["ts", "typescript", "all"]:
+        print(f"\n📘 TypeScript:")
+        print(f"   import {{ colors, ColorPalette }} from './mikocss';")
+        print(f"   const palette: ColorPalette = colors;")
+    return
 
 
 if __name__ == "__main__":

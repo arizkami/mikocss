@@ -1,0 +1,61 @@
+{
+  "name": "@mikocss/core",
+  "version": "1.0.0",
+  "description": "MikoCSS Core - JIT compiler and utilities for dynamic CSS generation",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./jit": {
+      "import": "./dist/jit/index.mjs",
+      "require": "./dist/jit/index.js",
+      "types": "./dist/jit/index.d.ts"
+    },
+    "./colors": {
+      "import": "./dist/colors/index.mjs",
+      "require": "./dist/colors/index.js",
+      "types": "./dist/colors/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun run build:types && bun run build:bundle",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:bundle": "bun build src/index.ts --outdir dist --target node --format esm,cjs",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "css",
+    "jit",
+    "compiler",
+    "styling",
+    "mikocss",
+    "typescript"
+  ],
+  "author": "MikoCSS Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
