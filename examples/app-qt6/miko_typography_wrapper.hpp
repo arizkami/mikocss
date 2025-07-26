@@ -3,7 +3,7 @@
 #include <QApplication>
 #include <unordered_map>
 #include <string>
-#include "typography.hpp"
+#include "miko_typography.hpp"
 
 namespace miko {
 

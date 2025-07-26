@@ -40,7 +40,7 @@ def generate_wrapper_hpp(all_colors, framework="gtk"):
 
     lines.append("#include <unordered_map>")
     lines.append("#include <vector>")
-    lines.append('#include "color.hpp"\n')
+    lines.append('#include "miko_color.hpp"\n')
     lines.append("namespace miko {\n")
     lines.append("using Color = twcolors::Color;\n")
 
